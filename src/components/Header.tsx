@@ -81,7 +81,7 @@ export const Header = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {categorias.slice(0, 8).map((categoria) => (
+                        {categorias.slice(0, 10).map((categoria) => (
                           <li key={categoria.id}>
                             <NavigationMenuLink asChild>
                               <Link
@@ -91,9 +91,9 @@ export const Header = () => {
                                 <div className="text-sm font-medium leading-none">
                                   {categoria.nome}
                                 </div>
-                                {categoria.subcategorias && (
+                                {categoria.subcategorias && categoria.subcategorias.length > 0 && (
                                   <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                                    {categoria.subcategorias.slice(0, 2).join(", ")}...
+                                    {categoria.subcategorias.slice(0, 3).map(s => s.nome).join(", ")}...
                                   </p>
                                 )}
                               </Link>
