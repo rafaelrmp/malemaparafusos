@@ -28,7 +28,7 @@ export const categorias: Category[] = [
     icon: "wrench",
     subcategorias: [
       {
-        nome: "AGRÍCOLAS",
+        nome: "Agrícolas",
         slug: "agricolas",
         itens: [
           { nome: "Parafuso Aro Roda", slug: "parafuso-aro-roda" },
@@ -52,7 +52,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "ARRUELAS",
+        nome: "Arruelas",
         slug: "arruelas",
         itens: [
           { nome: "Arruela de Alumínio", slug: "arruela-aluminio" },
@@ -67,7 +67,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "PARAFUSOS",
+        nome: "Parafusos",
         slug: "parafusos-tipos",
         itens: [
           { nome: "Barra Roscada", slug: "barra-roscada" },
@@ -101,7 +101,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "PORCAS",
+        nome: "Porcas",
         slug: "porcas",
         itens: [
           { nome: "Aço", slug: "porca-aco" },
@@ -116,7 +116,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "PARAFUSOS AUTOMOTIVOS",
+        nome: "Parafusos Automotivos",
         slug: "parafusos-automotivos",
         itens: [
           { nome: "Bujão Carter", slug: "bujao-carter" },
@@ -135,7 +135,7 @@ export const categorias: Category[] = [
     icon: "hammer",
     subcategorias: [
       {
-        nome: "FERRAMENTAS A COMBUSTÃO",
+        nome: "Ferramentas a Combustão",
         slug: "ferramentas-combustao",
         itens: [
           { nome: "Gerador", slug: "gerador" },
@@ -144,7 +144,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "FERRAMENTAS AUTOMOTIVAS",
+        nome: "Ferramentas Automotivas",
         slug: "ferramentas-automotivas",
         itens: [
           { nome: "Acessórios", slug: "acessorios-automotivos" },
@@ -165,7 +165,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "FERRAMENTAS ELÉTRICAS",
+        nome: "Ferramentas Elétricas",
         slug: "ferramentas-eletricas",
         itens: [
           {
@@ -219,7 +219,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "FERRAMENTAS MANUAIS",
+        nome: "Ferramentas Manuais",
         slug: "ferramentas-manuais",
         itens: [
           { nome: "Acessórios", slug: "acessorios-manuais" },
@@ -291,7 +291,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "FERRAMENTAS PNEUMÁTICAS",
+        nome: "Ferramentas Pneumáticas",
         slug: "ferramentas-pneumaticas",
         itens: [
           {
@@ -312,7 +312,7 @@ export const categorias: Category[] = [
         ]
       },
       {
-        nome: "FERRAMENTAS P/ TORNO",
+        nome: "Ferramentas p/ Torno",
         slug: "ferramentas-torno",
         itens: [
           { nome: "Inserto P/ Torno", slug: "inserto-torno" },
@@ -350,7 +350,7 @@ export const categorias: Category[] = [
     icon: "flame",
     subcategorias: [
       {
-        nome: "ACESSÓRIOS",
+        nome: "Acessórios",
         slug: "acessorios-solda",
         itens: [
           { nome: "Esquadro Magnético", slug: "esquadro-magnetico" },
@@ -374,7 +374,7 @@ export const categorias: Category[] = [
     icon: "target",
     subcategorias: [
       {
-        nome: "BROCAS",
+        nome: "Brocas",
         slug: "brocas",
         itens: [
           { nome: "Broca para Aço", slug: "broca-aco" },
@@ -429,14 +429,14 @@ export const categorias: Category[] = [
     icon: "plug",
     subcategorias: [
       {
-        nome: "ACESSÓRIOS ELETRODOMÉSTICOS",
+        nome: "Acessórios Eletrodomésticos",
         slug: "acessorios-eletrodomesticos",
         itens: [
           { nome: "Saco Coletor de Pó", slug: "saco-coletor-po" }
         ]
       },
       {
-        nome: "PARA A CASA",
+        nome: "Para a Casa",
         slug: "para-casa",
         itens: [
           { nome: "Aspirador de Pó", slug: "aspirador-po" }
@@ -611,7 +611,7 @@ export const categorias: Category[] = [
     icon: "home",
     subcategorias: [
       {
-        nome: "ACESSÓRIOS DE LIMPEZA",
+        nome: "Acessórios de Limpeza",
         slug: "acessorios-limpeza",
         itens: [
           { nome: "Rodos", slug: "rodos" },
@@ -657,7 +657,7 @@ export const categorias: Category[] = [
       { nome: "Roçadeiras", slug: "rocadeiras" },
       { nome: "Suportes", slug: "suportes" },
       {
-        nome: "CUIDADOS AUTOMOTIVOS",
+        nome: "Cuidados Automotivos",
         slug: "cuidados-automotivos",
         itens: [
           { nome: "Desengraxantes", slug: "desengraxantes" },
