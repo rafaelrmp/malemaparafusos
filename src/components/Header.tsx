@@ -20,7 +20,6 @@ export const Header = () => {
 
   const navItems = [
     { to: "/", label: "Início" },
-    { to: "/catalogo", label: "Catálogo" },
     { to: "/sobre", label: "Sobre" },
     { to: "/contato", label: "Contato" },
   ];
@@ -71,41 +70,8 @@ export const Header = () => {
               </Link>
             </div>
 
-            {/* Desktop Navigation with Categories */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent">
-                      Categorias
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {categorias.slice(0, 10).map((categoria) => (
-                          <li key={categoria.id}>
-                            <NavigationMenuLink asChild>
-                              <Link
-                                to={`/catalogo?categoria=${categoria.slug}`}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                              >
-                                <div className="text-sm font-medium leading-none">
-                                  {categoria.nome}
-                                </div>
-                                {categoria.subcategorias && categoria.subcategorias.length > 0 && (
-                                  <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                                    {categoria.subcategorias.slice(0, 3).map(s => s.nome).join(", ")}...
-                                  </p>
-                                )}
-                              </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}
