@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { destaques } from "@/data/products";
@@ -36,7 +36,7 @@ const Index = () => {
       <Header />
       
       <main className="flex-1">
-        <Hero />
+        <HeroCarousel />
 
         {/* Produtos em Destaque */}
         <section className="py-16 bg-background">
