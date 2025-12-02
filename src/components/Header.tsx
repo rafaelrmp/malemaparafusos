@@ -155,8 +155,8 @@ export const Header = () => {
         {/* Categories bar - Desktop */}
         <div className="hidden md:block bg-secondary border-t">
           <div className="container mx-auto px-4">
-            <div className="flex items-center gap-1 py-2 overflow-x-auto">
-              {categorias.slice(0, 7).map((categoria) => (
+            <div className="flex items-center gap-1 py-2 overflow-x-auto scrollbar-thin">
+              {categorias.map((categoria) => (
                 <Link
                   key={categoria.id}
                   to={`/catalogo?categoria=${categoria.slug}`}
@@ -165,12 +165,6 @@ export const Header = () => {
                   {categoria.nome}
                 </Link>
               ))}
-              <Link
-                to="/catalogo"
-                className="px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/10 rounded transition-colors whitespace-nowrap"
-              >
-                Ver Todas →
-              </Link>
             </div>
           </div>
         </div>
