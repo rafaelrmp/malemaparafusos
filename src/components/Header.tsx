@@ -152,20 +152,67 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Categories bar - Desktop */}
+        {/* Categories bar - Desktop with Dropdowns */}
         <div className="hidden md:block bg-secondary border-t">
           <div className="container mx-auto px-4">
-            <div className="flex items-center gap-1 py-2 overflow-x-auto scrollbar-thin">
-              {categorias.map((categoria) => (
-                <Link
-                  key={categoria.id}
-                  to={`/catalogo?categoria=${categoria.slug}`}
-                  className="px-3 py-1.5 text-xs font-medium text-foreground/80 hover:text-primary hover:bg-primary/10 rounded transition-colors whitespace-nowrap"
-                >
-                  {categoria.nome}
-                </Link>
-              ))}
-            </div>
+            <NavigationMenu className="max-w-none w-full justify-start">
+              <NavigationMenuList className="flex-wrap gap-0">
+                {categorias.map((categoria) => (
+                  <NavigationMenuItem key={categoria.id}>
+                    {categoria.subcategorias && categoria.subcategorias.length > 0 ? (
+                      <>
+                        <NavigationMenuTrigger className="h-auto px-3 py-2 text-xs font-medium bg-transparent hover:bg-primary/10 data-[state=open]:bg-primary/10">
+                          {categoria.nome}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <div className="w-[400px] p-4 bg-popover border rounded-md shadow-lg">
+                            <div className="mb-2 pb-2 border-b">
+                              <Link
+                                to={`/catalogo?categoria=${categoria.slug}`}
+                                className="text-sm font-semibold text-primary hover:underline"
+                              >
+                                Ver todos em {categoria.nome}
+                              </Link>
+                            </div>
+                            <ul className="grid grid-cols-2 gap-1">
+                              {categoria.subcategorias.slice(0, 12).map((sub) => (
+                                <li key={sub.slug}>
+                                  <NavigationMenuLink asChild>
+                                    <Link
+                                      to={`/catalogo?categoria=${categoria.slug}/${sub.slug}`}
+                                      className="block px-2 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-accent rounded transition-colors"
+                                    >
+                                      {sub.nome}
+                                    </Link>
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
+                              {categoria.subcategorias.length > 12 && (
+                                <li className="col-span-2 mt-2 pt-2 border-t">
+                                  <Link
+                                    to={`/catalogo?categoria=${categoria.slug}`}
+                                    className="text-xs text-primary hover:underline"
+                                  >
+                                    + {categoria.subcategorias.length - 12} mais subcategorias
+                                  </Link>
+                                </li>
+                              )}
+                            </ul>
+                          </div>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <Link
+                        to={`/catalogo?categoria=${categoria.slug}`}
+                        className="flex items-center px-3 py-2 text-xs font-medium text-foreground/80 hover:text-primary hover:bg-primary/10 rounded transition-colors"
+                      >
+                        {categoria.nome}
+                      </Link>
+                    )}
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
       </header>
