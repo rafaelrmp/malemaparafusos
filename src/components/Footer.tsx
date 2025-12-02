@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -18,7 +18,7 @@ export const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Especialistas em fixação e ferramentas industriais há mais de 20 anos.
+              Especialistas em fixação, ferramentas e ferragens industriais. Qualidade e variedade para seu projeto.
             </p>
           </div>
 
@@ -53,10 +53,26 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Categorias</h3>
             <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">Parafusos</li>
-              <li className="text-muted-foreground">Porcas</li>
-              <li className="text-muted-foreground">Arruelas</li>
-              <li className="text-muted-foreground">Ferramentas</li>
+              <li>
+                <Link to="/catalogo?categoria=parafusos" className="text-muted-foreground hover:text-primary transition-colors">
+                  Parafusos
+                </Link>
+              </li>
+              <li>
+                <Link to="/catalogo?categoria=ferramentas" className="text-muted-foreground hover:text-primary transition-colors">
+                  Ferramentas
+                </Link>
+              </li>
+              <li>
+                <Link to="/catalogo?categoria=abracadeiras" className="text-muted-foreground hover:text-primary transition-colors">
+                  Abraçadeiras
+                </Link>
+              </li>
+              <li>
+                <Link to="/catalogo?categoria=solda" className="text-muted-foreground hover:text-primary transition-colors">
+                  Solda
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -66,27 +82,49 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Rua Exemplo, 123<br />São Paulo - SP</span>
+                <span>São Paulo - SP</span>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>(11) 99999-9999</span>
+              <li>
+                <a href="tel:+5511940291064" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4 flex-shrink-0" />
+                  <span>(11) 94029-1064</span>
+                </a>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>contato@malemaparafusos.com.br</span>
+              <li>
+                <a 
+                  href="https://wa.me/5511940291064" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-[#25D366] transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4 flex-shrink-0" />
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contato@malemaparafusos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="h-4 w-4 flex-shrink-0" />
+                  <span>contato@malemaparafusos.com.br</span>
+                </a>
               </li>
             </ul>
 
             <div className="flex items-center gap-3 mt-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.facebook.com/MalemaParafusos" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/malemaparafusos" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
