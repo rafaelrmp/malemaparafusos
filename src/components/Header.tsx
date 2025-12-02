@@ -31,9 +31,9 @@ export const Header = () => {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2">
             <div className="flex items-center justify-end gap-6 text-sm">
-              <a href="tel:+5511999999999" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <a href="tel:+5511940291064" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Phone className="h-4 w-4" />
-                <span className="hidden sm:inline">(11) 99999-9999</span>
+                <span className="hidden sm:inline">(11) 94029-1064</span>
               </a>
               <a href="mailto:contato@malemaparafusos.com.br" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Mail className="h-4 w-4" />
