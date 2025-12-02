@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ProductCard } from "@/components/ProductCard";
-import { produtos } from "@/data/products";
+import { CategoryCard } from "@/components/CategoryCard";
+import { categorias } from "@/data/products";
 
 const Catalogo = () => {
   return (
@@ -19,16 +19,17 @@ const Catalogo = () => {
           </div>
         </section>
 
-        {/* Products Grid */}
+        {/* Categories Grid */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {produtos.map((produto) => (
-                <ProductCard
-                  key={produto.id}
-                  nome={produto.nome}
-                  descricao={produto.descricao}
-                  icon={produto.icon}
+              {categorias.map((categoria) => (
+                <CategoryCard
+                  key={categoria.id}
+                  nome={categoria.nome}
+                  descricao={categoria.descricao || `Produtos da categoria ${categoria.nome}`}
+                  icon={categoria.icon}
+                  slug={categoria.slug}
                 />
               ))}
             </div>

@@ -17,6 +17,7 @@ export interface Category {
   nome: string;
   slug: string;
   icon: string;
+  descricao?: string;
   subcategorias?: Subcategoria[];
 }
 
@@ -26,6 +27,7 @@ export const categorias: Category[] = [
     nome: "PARAFUSOS",
     slug: "parafusos",
     icon: "wrench",
+    descricao: "Linha completa de parafusos para todas as aplicações industriais, comerciais e agrícolas",
     subcategorias: [
       {
         nome: "Agrícolas",
@@ -133,6 +135,7 @@ export const categorias: Category[] = [
     nome: "FERRAMENTAS",
     slug: "ferramentas",
     icon: "hammer",
+    descricao: "Ferramentas profissionais manuais, elétricas e pneumáticas para montagem e manutenção",
     subcategorias: [
       {
         nome: "Ferramentas a Combustão",
@@ -327,6 +330,7 @@ export const categorias: Category[] = [
     nome: "ABRAÇADEIRAS",
     slug: "abracadeiras",
     icon: "circle",
+    descricao: "Abraçadeiras de nylon, metálicas e especiais para fixação de tubos e mangueiras",
     subcategorias: [
       { nome: "Abraçadeira para Canos", slug: "abracadeira-canos" },
       { nome: "Bico Injetor", slug: "bico-injetor" },
@@ -348,6 +352,7 @@ export const categorias: Category[] = [
     nome: "SOLDA",
     slug: "solda",
     icon: "flame",
+    descricao: "Equipamentos e consumíveis para solda MIG, TIG, eletrodo e muito mais",
     subcategorias: [
       {
         nome: "Acessórios",
@@ -372,6 +377,7 @@ export const categorias: Category[] = [
     nome: "PERFURAÇÃO",
     slug: "perfuracao",
     icon: "target",
+    descricao: "Brocas, serras copo, fresas e acessórios para perfuração em diversos materiais",
     subcategorias: [
       {
         nome: "Brocas",
@@ -403,6 +409,7 @@ export const categorias: Category[] = [
     nome: "CORTE / DESBASTE / LIXA",
     slug: "corte-desbaste-lixa",
     icon: "scissors",
+    descricao: "Discos de corte, desbaste, lixas e ferramentas abrasivas profissionais",
     subcategorias: [
       { nome: "Acessórios Corte / Lixa", slug: "acessorios-corte-lixa" },
       { nome: "Disco de Corte", slug: "disco-corte" },
@@ -427,6 +434,7 @@ export const categorias: Category[] = [
     nome: "ELETRODOMÉSTICOS",
     slug: "eletrodomesticos",
     icon: "plug",
+    descricao: "Eletrodomésticos e acessórios para casa e ambiente de trabalho",
     subcategorias: [
       {
         nome: "Acessórios Eletrodomésticos",
@@ -449,6 +457,7 @@ export const categorias: Category[] = [
     nome: "ELEMENTOS DE FIXAÇÃO",
     slug: "elementos-fixacao",
     icon: "anchor",
+    descricao: "Rebites, anéis de retenção, chavetas e elementos diversos de fixação",
     subcategorias: [
       { nome: "Anel de Retenção", slug: "anel-retencao" },
       { nome: "Chavetas", slug: "chavetas" },
@@ -473,6 +482,7 @@ export const categorias: Category[] = [
     nome: "ELEVAÇÃO E CARGA",
     slug: "elevacao-carga",
     icon: "arrow-up",
+    descricao: "Cabos de aço, correntes, catracas e equipamentos para elevação de cargas",
     subcategorias: [
       { nome: "Anilha / Sapatilha", slug: "anilha-sapatilha" },
       { nome: "Cabo de Aço", slug: "cabo-aco" },
@@ -495,6 +505,7 @@ export const categorias: Category[] = [
     nome: "E.P.I",
     slug: "epi",
     icon: "hard-hat",
+    descricao: "Equipamentos de proteção individual para segurança no trabalho",
     subcategorias: [
       { nome: "Avental", slug: "avental" },
       { nome: "Botina", slug: "botina" },
@@ -514,6 +525,7 @@ export const categorias: Category[] = [
     nome: "ORGANIZADORES",
     slug: "organizadores",
     icon: "box",
+    descricao: "Caixas, carros, maletas e gaveteiros para organização de ferramentas",
     subcategorias: [
       { nome: "Bandejas Magnética", slug: "bandejas-magnetica" },
       { nome: "Bolsa de Cintura", slug: "bolsa-cintura" },
@@ -528,6 +540,7 @@ export const categorias: Category[] = [
     nome: "PEÇAS AUTOMOTIVAS",
     slug: "pecas-automotivas",
     icon: "car",
+    descricao: "Peças, acessórios e componentes para manutenção automotiva",
     subcategorias: [
       { nome: "Abraçadeira Cano Injetor", slug: "abracadeira-cano-injetor" },
       {
@@ -560,6 +573,7 @@ export const categorias: Category[] = [
     nome: "QUÍMICOS / TINTAS",
     slug: "quimicos-tintas",
     icon: "droplet",
+    descricao: "Tintas spray, colas, graxas, silicones e produtos químicos",
     subcategorias: [
       { nome: "Automotivos", slug: "quimicos-automotivos" },
       { nome: "Colas", slug: "colas" },
@@ -579,6 +593,7 @@ export const categorias: Category[] = [
     nome: "SINALIZAÇÃO",
     slug: "sinalizacao",
     icon: "alert-triangle",
+    descricao: "Cones, fitas zebradas e correntes para sinalização de segurança",
     subcategorias: [
       { nome: "Cone", slug: "cone" },
       { nome: "Corrente Plástica", slug: "corrente-plastica" },
@@ -590,6 +605,7 @@ export const categorias: Category[] = [
     nome: "TERMOPLÁSTICOS E TERMOFIXOS",
     slug: "termoplasticos-termofixos",
     icon: "layers",
+    descricao: "Manípulos, alavancas, botões e componentes plásticos industriais",
     subcategorias: [
       { nome: "Alavanca Plástica", slug: "alavanca-plastica" },
       { nome: "Alavancas", slug: "alavancas" },
@@ -609,6 +625,7 @@ export const categorias: Category[] = [
     nome: "CASA E JARDIM",
     slug: "casa-jardim",
     icon: "home",
+    descricao: "Produtos para casa, jardim, limpeza e cuidados automotivos",
     subcategorias: [
       {
         nome: "Acessórios de Limpeza",
