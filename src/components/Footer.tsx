@@ -82,12 +82,12 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>São Paulo - SP</span>
+                <span>Rua São João nº 287 - Centro<br />Araçariguama - SP, CEP 18147-000</span>
               </li>
               <li>
-                <a href="tel:+5511940291064" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+551142041222" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  <span>(11) 94029-1064</span>
+                  <span>Televendas: (11) 4204-1222</span>
                 </a>
               </li>
               <li>
@@ -98,13 +98,13 @@ export const Footer = () => {
                   className="flex items-center gap-2 text-muted-foreground hover:text-[#25D366] transition-colors"
                 >
                   <MessageCircle className="h-4 w-4 flex-shrink-0" />
-                  <span>WhatsApp</span>
+                  <span>WhatsApp: (11) 94029-1064</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:contato@malemaparafusos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:vendas@malemaparafusos.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span>contato@malemaparafusos.com.br</span>
+                  <span>vendas@malemaparafusos.com.br</span>
                 </a>
               </li>
             </ul>

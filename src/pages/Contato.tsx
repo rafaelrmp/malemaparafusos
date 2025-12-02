@@ -74,9 +74,9 @@ const Contato = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                       <p className="text-muted-foreground">
-                        Rua Exemplo, 123<br />
-                        Bairro Industrial<br />
-                        São Paulo - SP, 01234-567
+                        Rua São João nº 287 - Centro<br />
+                        Araçariguama - SP<br />
+                        CEP 18147-000
                       </p>
                     </div>
                   </div>
@@ -88,8 +88,8 @@ const Contato = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
                       <p className="text-muted-foreground">
-                        (11) 99999-9999<br />
-                        (11) 3333-3333
+                        <a href="tel:+551142041222" className="hover:text-primary transition-colors">Televendas: (11) 4204-1222</a><br />
+                        <a href="https://wa.me/5511940291064" target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors">WhatsApp: (11) 94029-1064</a>
                       </p>
                     </div>
                   </div>
@@ -101,8 +101,7 @@ const Contato = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">E-mail</h3>
                       <p className="text-muted-foreground">
-                        contato@malemaparafusos.com.br<br />
-                        vendas@malemaparafusos.com.br
+                        <a href="mailto:vendas@malemaparafusos.com.br" className="hover:text-primary transition-colors">vendas@malemaparafusos.com.br</a>
                       </p>
                     </div>
                   </div>
