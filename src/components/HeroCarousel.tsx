@@ -1,8 +1,31 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { heroSlides } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+
+const heroSlides = [
+  {
+    id: 1,
+    title: "Parafusos de Alta Qualidade",
+    subtitle: "Linha completa para indústria",
+    image: heroSlide1
+  },
+  {
+    id: 2,
+    title: "Ferramentas Profissionais",
+    subtitle: "Para todos os tipos de trabalho",
+    image: heroSlide2
+  },
+  {
+    id: 3,
+    title: "Fixadores Especiais",
+    subtitle: "Soluções completas de fixação",
+    image: heroSlide3
+  }
+];
 
 export const HeroCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

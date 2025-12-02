@@ -749,24 +749,3 @@ export const produtos: Product[] = [
 ];
 
 export const destaques: Product[] = produtos.slice(0, 4);
-
-export const heroSlides = [
-  {
-    id: 1,
-    title: "Parafusos de Alta Qualidade",
-    subtitle: "Linha completa para indústria",
-    image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&h=600&fit=crop"
-  },
-  {
-    id: 2,
-    title: "Ferramentas Profissionais",
-    subtitle: "Para todos os tipos de trabalho",
-    image: "https://images.unsplash.com/photo-1581147036324-c17ac41f47b3?w=800&h=600&fit=crop"
-  },
-  {
-    id: 3,
-    title: "Fixadores Especiais",
-    subtitle: "Soluções completas de fixação",
-    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&h=600&fit=crop"
-  }
-];
