@@ -66,27 +66,12 @@ export const HeroCarousel = () => {
               key={slide.id}
               className="embla__slide flex-[0_0_100%] min-w-0 relative"
             >
-              {/* Vertical strips effect */}
-              <div className="absolute inset-0 flex">
-                {[...Array(5)].map((_, stripIndex) => (
-                  <div
-                    key={stripIndex}
-                    className="flex-1 relative overflow-hidden"
-                    style={{
-                      transform: `translateY(${stripIndex % 2 === 0 ? '0' : '10px'})`,
-                    }}
-                  >
-                    <div
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${slide.image})`,
-                        backgroundPosition: `${stripIndex * 25}% center`,
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
-                  </div>
-                ))}
-              </div>
+              {/* Background image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
               {/* Content overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
