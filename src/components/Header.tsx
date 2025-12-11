@@ -59,13 +59,13 @@ export const Header = () => {
                 <div className="flex items-center gap-3 bg-primary px-4 py-2 rounded-lg">
                   <img 
                     src={logoMalemaText} 
-                    alt="Malema" 
-                    className="h-8 w-auto object-contain brightness-0 invert"
+                    alt="Malema Parafusos" 
+                    className="h-10 w-auto object-contain"
                   />
                   <img 
                     src={mascoteLogo} 
-                    alt="Malema Parafusos" 
-                    className="h-10 w-auto object-contain"
+                    alt="Malema Parafusos Mascote" 
+                    className="h-12 w-auto object-contain"
                   />
                 </div>
               </Link>
