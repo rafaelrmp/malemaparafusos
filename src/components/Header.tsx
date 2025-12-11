@@ -56,7 +56,7 @@ export const Header = () => {
               </Button>
 
               <Link to="/" className="flex items-center">
-                <div className="flex items-center gap-3 bg-primary px-4 py-2 rounded-lg">
+                <div className="flex items-center gap-3 bg-primary px-4 py-2 rounded-lg shadow-[0_4px_20px_rgba(220,38,38,0.5)]">
                   <img 
                     src={logoMalemaText} 
                     alt="Malema Parafusos" 
