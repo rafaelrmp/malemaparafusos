@@ -43,7 +43,7 @@ export const Header = () => {
 
         {/* Main header */}
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-20 items-center justify-between">
             {/* Menu button + Logo */}
             <div className="flex items-center gap-4">
               <Button
