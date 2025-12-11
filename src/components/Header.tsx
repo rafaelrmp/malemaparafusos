@@ -6,6 +6,7 @@ import { Phone, Mail, Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CategorySidebar } from "@/components/CategorySidebar";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
+import mascoteLogo from "@/assets/mascote-malema.png";
 
 export const Header = () => {
   const [categorySidebarOpen, setCategorySidebarOpen] = useState(false);
@@ -55,9 +56,11 @@ export const Header = () => {
 
               <Link to="/" className="flex items-center space-x-2">
                 <div className="flex items-center gap-2">
-                  <div className="h-10 w-10 rounded-full bg-gradient-hero flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">M</span>
-                  </div>
+                  <img 
+                    src={mascoteLogo} 
+                    alt="Malema Parafusos" 
+                    className="h-12 w-auto object-contain"
+                  />
                   <div className="flex flex-col">
                     <span className="text-xl font-bold text-foreground">Malema</span>
                     <span className="text-xs text-muted-foreground">Parafusos</span>
