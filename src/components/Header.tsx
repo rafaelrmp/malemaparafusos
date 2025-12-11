@@ -7,7 +7,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CategorySidebar } from "@/components/CategorySidebar";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import mascoteLogo from "@/assets/mascote-malema.png";
-import logoMalemaText from "@/assets/logo-malema-text.png";
 
 export const Header = () => {
   const [categorySidebarOpen, setCategorySidebarOpen] = useState(false);
@@ -43,7 +42,7 @@ export const Header = () => {
 
         {/* Main header */}
         <div className="container mx-auto px-4">
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-16 items-center justify-between">
             {/* Menu button + Logo */}
             <div className="flex items-center gap-4">
               <Button
@@ -55,18 +54,17 @@ export const Header = () => {
                 <Menu className="h-6 w-6" />
               </Button>
 
-              <Link to="/" className="flex items-center">
-                <div className="flex items-center gap-3 bg-primary px-4 py-2 rounded-lg shadow-[0_4px_20px_rgba(220,38,38,0.5)]">
-                  <img 
-                    src={logoMalemaText} 
-                    alt="Malema Parafusos" 
-                    className="h-10 w-auto object-contain"
-                  />
+              <Link to="/" className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <img 
                     src={mascoteLogo} 
-                    alt="Malema Parafusos Mascote" 
+                    alt="Malema Parafusos" 
                     className="h-12 w-auto object-contain"
                   />
+                  <div className="flex flex-col">
+                    <span className="text-xl font-bold text-foreground">Malema</span>
+                    <span className="text-xs text-muted-foreground">Parafusos</span>
+                  </div>
                 </div>
               </Link>
             </div>
