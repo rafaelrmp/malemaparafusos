@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
+import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import { destaques } from "@/data/products";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
@@ -104,9 +105,12 @@ const Index = () => {
             <p className="text-xl mb-8 text-primary-foreground/90">
               Entre em contato e solicite um orçamento personalizado
             </p>
-            <Button asChild size="lg" variant="secondary" className="text-lg">
-              <Link to="/contato">Fale Conosco</Link>
-            </Button>
+            <QuoteRequestDialog 
+              buttonVariant="secondary" 
+              buttonSize="lg" 
+              buttonClassName="text-lg"
+              buttonText="Fale Conosco"
+            />
           </div>
         </section>
       </main>
