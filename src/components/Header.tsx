@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CategorySidebar } from "@/components/CategorySidebar";
+import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 
 export const Header = () => {
   const [categorySidebarOpen, setCategorySidebarOpen] = useState(false);
@@ -79,9 +80,11 @@ export const Header = () => {
                 </NavLink>
               ))}
 
-              <Button asChild variant="default" size="sm" className="ml-2">
-                <Link to="/contato">Solicitar Orçamento</Link>
-              </Button>
+              <QuoteRequestDialog>
+                <Button variant="default" size="sm" className="ml-2">
+                  Solicitar Orçamento
+                </Button>
+              </QuoteRequestDialog>
             </nav>
 
             {/* Mobile Navigation */}
@@ -104,9 +107,11 @@ export const Header = () => {
                       {item.label}
                     </NavLink>
                   ))}
-                  <Button asChild variant="default" className="mt-4">
-                    <Link to="/contato">Solicitar Orçamento</Link>
-                  </Button>
+                  <QuoteRequestDialog>
+                    <Button variant="default" className="mt-4">
+                      Solicitar Orçamento
+                    </Button>
+                  </QuoteRequestDialog>
                 </nav>
               </SheetContent>
             </Sheet>

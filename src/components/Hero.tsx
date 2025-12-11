@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 
 export const Hero = () => {
   return (
@@ -22,9 +23,11 @@ export const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Link to="/contato">Solicitar Orçamento</Link>
-            </Button>
+            <QuoteRequestDialog>
+              <Button size="lg" variant="outline" className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Solicitar Orçamento
+              </Button>
+            </QuoteRequestDialog>
           </div>
         </div>
       </div>
