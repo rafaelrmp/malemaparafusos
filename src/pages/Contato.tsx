@@ -4,39 +4,84 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { quoteFormSchema, type QuoteFormData } from "@/lib/validations";
+
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/vendas@malemaparafusos.com.br";
 
 const Contato = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof QuoteFormData, string>>>({});
+  const [formData, setFormData] = useState<QuoteFormData>({
     nome: "",
     email: "",
     telefone: "",
     mensagem: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Aqui você integraria com um serviço de email (FormSubmit, EmailJS, etc.)
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
-    });
+    setErrors({});
 
-    // Reset form
-    setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
+    // Validate with Zod
+    const result = quoteFormSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof QuoteFormData, string>> = {};
+      result.error.errors.forEach((error) => {
+        const field = error.path[0] as keyof QuoteFormData;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nome: result.data.nome,
+          email: result.data.email,
+          telefone: result.data.telefone,
+          mensagem: result.data.mensagem,
+          _subject: "Nova Mensagem de Contato - Malema Parafusos",
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Entraremos em contato em breve.",
+        });
+        setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
+      } else {
+        throw new Error("Erro ao enviar");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name as keyof QuoteFormData]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
   };
 
   return (
@@ -127,19 +172,22 @@ const Contato = () => {
                   <h2 className="text-2xl font-bold text-foreground mb-6">Envie sua Mensagem</h2>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <Label htmlFor="nome">Nome Completo</Label>
+                      <Label htmlFor="nome">Nome Completo *</Label>
                       <Input
                         id="nome"
                         name="nome"
                         value={formData.nome}
                         onChange={handleChange}
                         placeholder="Seu nome"
-                        required
+                        className={errors.nome ? "border-destructive" : ""}
                       />
+                      {errors.nome && (
+                        <p className="text-sm text-destructive mt-1">{errors.nome}</p>
+                      )}
                     </div>
 
                     <div>
-                      <Label htmlFor="email">E-mail</Label>
+                      <Label htmlFor="email">E-mail *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -147,24 +195,30 @@ const Contato = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="seu@email.com"
-                        required
+                        className={errors.email ? "border-destructive" : ""}
                       />
+                      {errors.email && (
+                        <p className="text-sm text-destructive mt-1">{errors.email}</p>
+                      )}
                     </div>
 
                     <div>
-                      <Label htmlFor="telefone">Telefone</Label>
+                      <Label htmlFor="telefone">Telefone *</Label>
                       <Input
                         id="telefone"
                         name="telefone"
                         value={formData.telefone}
                         onChange={handleChange}
                         placeholder="(11) 99999-9999"
-                        required
+                        className={errors.telefone ? "border-destructive" : ""}
                       />
+                      {errors.telefone && (
+                        <p className="text-sm text-destructive mt-1">{errors.telefone}</p>
+                      )}
                     </div>
 
                     <div>
-                      <Label htmlFor="mensagem">Mensagem</Label>
+                      <Label htmlFor="mensagem">Mensagem *</Label>
                       <Textarea
                         id="mensagem"
                         name="mensagem"
@@ -172,12 +226,22 @@ const Contato = () => {
                         onChange={handleChange}
                         placeholder="Como podemos ajudar?"
                         rows={5}
-                        required
+                        className={errors.mensagem ? "border-destructive" : ""}
                       />
+                      {errors.mensagem && (
+                        <p className="text-sm text-destructive mt-1">{errors.mensagem}</p>
+                      )}
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
-                      Enviar Mensagem
+                    <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        "Enviar Mensagem"
+                      )}
                     </Button>
                   </form>
                 </div>
