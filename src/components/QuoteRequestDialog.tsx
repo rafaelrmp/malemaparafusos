@@ -21,10 +21,20 @@ const FORMSUBMIT_URL = "https://formsubmit.co/ajax/vendas@malemaparafusos.com.br
 type Step = "choose" | "form" | "success";
 
 interface QuoteRequestDialogProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  buttonText?: string;
+  buttonVariant?: "default" | "secondary" | "outline" | "ghost" | "link" | "destructive";
+  buttonSize?: "default" | "sm" | "lg" | "icon";
+  buttonClassName?: string;
 }
 
-export const QuoteRequestDialog = ({ children }: QuoteRequestDialogProps) => {
+export const QuoteRequestDialog = ({ 
+  children, 
+  buttonText = "Solicitar Orçamento",
+  buttonVariant = "default",
+  buttonSize = "default",
+  buttonClassName = ""
+}: QuoteRequestDialogProps) => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState<Step>("choose");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -120,7 +130,13 @@ export const QuoteRequestDialog = ({ children }: QuoteRequestDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogTrigger asChild>
+        {children || (
+          <Button variant={buttonVariant} size={buttonSize} className={buttonClassName}>
+            {buttonText}
+          </Button>
+        )}
+      </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         {step === "choose" && (
           <>
