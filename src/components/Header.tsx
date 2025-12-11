@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CategorySidebar } from "@/components/CategorySidebar";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import mascoteLogo from "@/assets/mascote-malema.png";
+import logoMalemaText from "@/assets/logo-malema-text.png";
 
 export const Header = () => {
   const [categorySidebarOpen, setCategorySidebarOpen] = useState(false);
@@ -54,17 +55,18 @@ export const Header = () => {
                 <Menu className="h-6 w-6" />
               </Button>
 
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="flex items-center gap-2">
+              <Link to="/" className="flex items-center">
+                <div className="flex items-center gap-3 bg-primary px-4 py-2 rounded-lg">
+                  <img 
+                    src={logoMalemaText} 
+                    alt="Malema" 
+                    className="h-8 w-auto object-contain brightness-0 invert"
+                  />
                   <img 
                     src={mascoteLogo} 
                     alt="Malema Parafusos" 
-                    className="h-12 w-auto object-contain"
+                    className="h-10 w-auto object-contain"
                   />
-                  <div className="flex flex-col">
-                    <span className="text-xl font-bold text-foreground">Malema</span>
-                    <span className="text-xs text-muted-foreground">Parafusos</span>
-                  </div>
                 </div>
               </Link>
             </div>
