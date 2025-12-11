@@ -250,11 +250,21 @@ const Contato = () => {
           </div>
         </section>
 
-        {/* Map Placeholder */}
+        {/* Google Maps */}
         <section className="py-16 bg-secondary">
           <div className="container mx-auto px-4">
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Mapa de localização (Google Maps)</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Nossa Localização</h2>
+            <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.8!2d-47.0619!3d-23.4361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5d7c8e8e8e8e%3A0x0!2sRua%20S%C3%A3o%20Jo%C3%A3o%2C%20287%20-%20Centro%2C%20Ara%C3%A7ariguama%20-%20SP%2C%2018147-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Malema Parafusos"
+              />
             </div>
           </div>
         </section>
