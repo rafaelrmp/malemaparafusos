@@ -59,7 +59,7 @@ export const Header = () => {
                   <img 
                     src={mascoteLogo} 
                     alt="Malema Parafusos" 
-                    className="h-12 w-auto object-contain"
+                    className="h-12 w-auto object-contain drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]"
                   />
                   <div className="flex flex-col">
                     <span className="text-xl font-bold text-foreground">Malema</span>
