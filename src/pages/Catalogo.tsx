@@ -79,11 +79,11 @@ const Catalogo = () => {
   const data = findCategoryData();
   
   const getPageTitle = () => {
-    if (data.type === "root") return "Catálogo de Produtos";
+    if (data.type === "root") return "Categorias de Produtos";
     if (data.breadcrumb.length > 0) {
       return data.breadcrumb[data.breadcrumb.length - 1].label;
     }
-    return "Catálogo de Produtos";
+    return "Categorias de Produtos";
   };
   
   const getPageDescription = () => {

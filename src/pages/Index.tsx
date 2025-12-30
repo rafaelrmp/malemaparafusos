@@ -65,7 +65,7 @@ const Index = () => {
 
             <div className="text-center">
               <Button asChild size="lg" variant="default">
-                <Link to="/catalogo">Ver Catálogo Completo</Link>
+                <Link to="/catalogo">Ver Categorias</Link>
               </Button>
             </div>
           </div>
