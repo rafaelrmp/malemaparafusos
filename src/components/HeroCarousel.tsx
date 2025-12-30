@@ -21,8 +21,8 @@ const heroSlides = [
   },
   {
     id: 3,
-    title: "Fixadores Especiais",
-    subtitle: "Soluções completas de fixação",
+    title: "Ferramentas Elétricas",
+    subtitle: "Potência e precisão para seu trabalho",
     image: heroSlide3
   }
 ];
