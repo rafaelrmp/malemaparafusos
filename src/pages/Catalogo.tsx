@@ -11,7 +11,7 @@ const WHATSAPP_NUMBER = "5511940291064";
 
 const getWhatsAppUrl = (productName: string, breadcrumb: { label: string; slug: string }[]) => {
   const categoryPath = [...breadcrumb.map(b => b.label), productName].join(" -> ");
-  const message = `Olá, acessei a categoria pelo menu do Malema Parafusos e gostaria de saber valores do produto (${categoryPath})`;
+  const message = `Olá, acessei a categoria pelo menu do Site Malema Parafusos e gostaria de saber valores do produto (${categoryPath})`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
