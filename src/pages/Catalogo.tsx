@@ -54,17 +54,9 @@ const Catalogo = () => {
       breadcrumb.push({ label: found.nome, slug: found.slug });
       parentSlug = `${parentSlug}/${found.slug}`;
       
-      // If this item has children, show them
+      // If this item has children, continue navigation
       if (found.itens && found.itens.length > 0) {
         currentItems = found.itens;
-      } else {
-        // This is a leaf item - show it as a final item
-        return {
-          type: "leaf" as const,
-          item: found,
-          breadcrumb,
-          parentSlug
-        };
       }
     }
     
@@ -141,55 +133,45 @@ const Catalogo = () => {
                   const hasChildren = item.itens && item.itens.length > 0;
                   const fullSlug = `${data.parentSlug}/${item.slug}`;
                   
-                  return (
-                    <Link 
-                      key={item.slug} 
-                      to={`/catalogo?categoria=${fullSlug}`}
-                    >
-                      <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
-                        <CardHeader className="pb-2">
-                          <CardTitle className="text-lg font-semibold flex items-center justify-between">
-                            <span>{item.nome}</span>
-                            <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                          </CardTitle>
-                        </CardHeader>
-                        {hasChildren && (
+                  // Items with children are clickable, final items are just displayed
+                  if (hasChildren) {
+                    return (
+                      <Link 
+                        key={item.slug} 
+                        to={`/catalogo?categoria=${fullSlug}`}
+                      >
+                        <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-lg font-semibold flex items-center justify-between">
+                              <span>{item.nome}</span>
+                              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </CardTitle>
+                          </CardHeader>
                           <CardContent className="pt-0">
                             <p className="text-sm text-muted-foreground">
                               {item.itens!.length} {item.itens!.length === 1 ? "item" : "itens"}
                             </p>
                           </CardContent>
-                        )}
-                      </Card>
-                    </Link>
+                        </Card>
+                      </Link>
+                    );
+                  }
+                  
+                  // Final items - display only, no click action
+                  return (
+                    <Card key={item.slug} className="border-border bg-card/50 h-full">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-base font-medium flex items-center gap-2 text-foreground/80">
+                          <span className="w-2 h-2 rounded-full bg-primary/60"></span>
+                          <span>{item.nome}</span>
+                        </CardTitle>
+                      </CardHeader>
+                    </Card>
                   );
                 })}
               </div>
             )}
 
-            {/* Leaf Item - Final product category */}
-            {data.type === "leaf" && (
-              <div className="max-w-2xl mx-auto">
-                <Card className="border-border bg-card">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-center">
-                      {data.item.nome}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground mb-6">
-                      Para mais informações sobre este produto, entre em contato conosco.
-                    </p>
-                    <a
-                      href="/contato"
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
-                    >
-                      Solicitar Orçamento
-                    </a>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
           </div>
         </section>
 
