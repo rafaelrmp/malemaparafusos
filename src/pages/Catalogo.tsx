@@ -10,8 +10,8 @@ import { ChevronRight, MessageCircle } from "lucide-react";
 const WHATSAPP_NUMBER = "5511940291064";
 
 const getWhatsAppUrl = (productName: string, breadcrumb: { label: string; slug: string }[]) => {
-  const path = breadcrumb.map(b => b.label).join(" > ");
-  const message = `Olá! Gostaria de mais informações sobre: ${path} > ${productName}`;
+  const categoryPath = [...breadcrumb.map(b => b.label), productName].join(" -> ");
+  const message = `Olá, acessei a categoria pelo menu do Malema Parafusos e gostaria de saber valores do produto (${categoryPath})`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
