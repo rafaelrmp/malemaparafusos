@@ -1,15 +1,12 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Menu, ChevronDown } from "lucide-react";
+import { Phone, Mail, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { CategorySidebar } from "@/components/CategorySidebar";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import mascoteLogo from "@/assets/mascote-malema.png";
 
 export const Header = () => {
-  const [categorySidebarOpen, setCategorySidebarOpen] = useState(false);
 
   const navItems = [
     { to: "/", label: "Início" },
@@ -43,17 +40,8 @@ export const Header = () => {
         {/* Main header */}
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
-            {/* Menu button + Logo */}
+            {/* Logo */}
             <div className="flex items-center gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setCategorySidebarOpen(true)}
-                className="hover:bg-primary/10"
-              >
-                <Menu className="h-6 w-6" />
-              </Button>
-
               <Link to="/" className="flex items-center space-x-2">
                 <div className="flex items-center gap-2">
                   <img 
@@ -122,7 +110,6 @@ export const Header = () => {
         </div>
       </header>
 
-      <CategorySidebar open={categorySidebarOpen} onOpenChange={setCategorySidebarOpen} />
     </>
   );
 };

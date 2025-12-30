@@ -1,10 +1,10 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import { ProductCard } from "@/components/ProductCard";
+import { CategoryCard } from "@/components/CategoryCard";
 import { Button } from "@/components/ui/button";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
-import { destaques } from "@/data/products";
+import { categorias } from "@/data/products";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
 
@@ -39,7 +39,7 @@ const Index = () => {
       <main className="flex-1">
         <HeroCarousel />
 
-        {/* Produtos em Destaque */}
+        {/* Nossos Produtos - Categorias */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -52,12 +52,13 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {destaques.map((produto) => (
-                <ProductCard
-                  key={produto.id}
-                  nome={produto.nome}
-                  descricao={produto.descricao}
-                  icon={produto.icon}
+              {categorias.map((categoria) => (
+                <CategoryCard
+                  key={categoria.id}
+                  nome={categoria.nome}
+                  descricao={categoria.descricao || `Produtos da categoria ${categoria.nome}`}
+                  icon={categoria.icon}
+                  slug={categoria.slug}
                 />
               ))}
             </div>
