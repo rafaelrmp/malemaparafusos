@@ -65,7 +65,7 @@ export const Header = () => {
                   to={item.to}
                   end
                   className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary rounded-md hover:bg-accent"
-                  activeClassName="text-primary font-semibold bg-accent"
+                  activeClassName="text-white font-semibold bg-red-600"
                 >
                   {item.label}
                 </NavLink>
@@ -92,8 +92,8 @@ export const Header = () => {
                       key={item.to}
                       to={item.to}
                       end
-                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary py-2"
-                      activeClassName="text-primary font-semibold"
+                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary py-2 px-3 rounded-md"
+                      activeClassName="text-white font-semibold bg-red-600"
                     >
                       {item.label}
                     </NavLink>
