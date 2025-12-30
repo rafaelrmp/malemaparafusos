@@ -5,7 +5,15 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { CategoryBreadcrumb } from "@/components/CategoryBreadcrumb";
 import { categorias, Subcategoria, Category } from "@/data/products";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "5511940291064";
+
+const getWhatsAppUrl = (productName: string, breadcrumb: { label: string; slug: string }[]) => {
+  const path = breadcrumb.map(b => b.label).join(" > ");
+  const message = `Olá! Gostaria de mais informações sobre: ${path} > ${productName}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+};
 
 const Catalogo = () => {
   const [searchParams] = useSearchParams();
@@ -157,16 +165,24 @@ const Catalogo = () => {
                     );
                   }
                   
-                  // Final items - display only, no click action
+                  // Final items - click to open WhatsApp
+                  const whatsappUrl = getWhatsAppUrl(item.nome, data.breadcrumb);
                   return (
-                    <Card key={item.slug} className="border-border bg-card/50 h-full">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-base font-medium flex items-center gap-2 text-foreground/80">
-                          <span className="w-2 h-2 rounded-full bg-primary/60"></span>
-                          <span>{item.nome}</span>
-                        </CardTitle>
-                      </CardHeader>
-                    </Card>
+                    <a
+                      key={item.slug}
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card/50 h-full hover:border-[#25D366]/50">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-base font-medium flex items-center gap-2 text-foreground/80 group-hover:text-[#25D366] transition-colors">
+                            <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                            <span>{item.nome}</span>
+                          </CardTitle>
+                        </CardHeader>
+                      </Card>
+                    </a>
                   );
                 })}
               </div>
