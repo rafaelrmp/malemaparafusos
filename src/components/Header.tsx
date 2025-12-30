@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, ChevronDown } from "lucide-react";
+import { Phone, Mail, ChevronDown, FileText } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import mascoteLogo from "@/assets/mascote-malema.png";
@@ -72,7 +72,11 @@ export const Header = () => {
               ))}
 
               <QuoteRequestDialog>
-                <Button variant="default" size="sm" className="ml-2">
+                <Button 
+                  size="sm" 
+                  className="ml-4 bg-red-600 text-white font-semibold hover:bg-red-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 gap-2"
+                >
+                  <FileText className="h-4 w-4" />
                   Solicitar Orçamento
                 </Button>
               </QuoteRequestDialog>
@@ -99,7 +103,10 @@ export const Header = () => {
                     </NavLink>
                   ))}
                   <QuoteRequestDialog>
-                    <Button variant="default" className="mt-4">
+                    <Button 
+                      className="mt-4 bg-red-600 text-white font-semibold hover:bg-red-700 shadow-lg hover:shadow-xl transition-all duration-300 gap-2 w-full"
+                    >
+                      <FileText className="h-4 w-4" />
                       Solicitar Orçamento
                     </Button>
                   </QuoteRequestDialog>
