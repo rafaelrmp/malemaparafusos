@@ -83,7 +83,7 @@ export const HeroCarousel = () => {
                     {slide.subtitle}
                   </p>
                   <Button asChild size="lg" className="text-lg">
-                    <Link to="/catalogo">Ver Catálogo</Link>
+                    <Link to="/catalogo">Ver Categorias</Link>
                   </Button>
                 </div>
               </div>
