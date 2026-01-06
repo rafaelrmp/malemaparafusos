@@ -5,13 +5,16 @@ import abracadeirasImg from "@/assets/catalogo/abracadeiras.jpg";
 import soldaImg from "@/assets/catalogo/solda.jpg";
 import perfuracaoImg from "@/assets/catalogo/perfuracao.jpg";
 import corteDesbasteImg from "@/assets/catalogo/corte-desbaste-lixa.jpg";
-import eletricaImg from "@/assets/catalogo/eletrica.jpg";
-import construcaoCivilImg from "@/assets/catalogo/construcao-civil.jpg";
-import automotivaImg from "@/assets/catalogo/automotiva.jpg";
-import hidraulicaImg from "@/assets/catalogo/hidraulica.jpg";
-import segurancaImg from "@/assets/catalogo/seguranca.jpg";
-import amarracaoImg from "@/assets/catalogo/amarracao-icamento.jpg";
+import eletrodomesticosImg from "@/assets/catalogo/eletrodomesticos.jpg";
 import fixadoresImg from "@/assets/catalogo/fixadores-acessorios.jpg";
+import amarracaoImg from "@/assets/catalogo/amarracao-icamento.jpg";
+import segurancaImg from "@/assets/catalogo/seguranca.jpg";
+import organizadoresImg from "@/assets/catalogo/organizadores.jpg";
+import pecasAutomotivasImg from "@/assets/catalogo/pecas-automotivas.jpg";
+import quimicosTintasImg from "@/assets/catalogo/quimicos-tintas.jpg";
+import sinalizacaoImg from "@/assets/catalogo/sinalizacao.jpg";
+import termoplasticosImg from "@/assets/catalogo/termoplasticos.jpg";
+import casaJardimImg from "@/assets/catalogo/casa-jardim.jpg";
 
 // Subcategorias Parafusos
 import agricolasImg from "@/assets/catalogo/parafusos/agricolas.jpg";
@@ -37,16 +40,16 @@ export const categoryImages: Record<string, string> = {
   "solda": soldaImg,
   "perfuracao": perfuracaoImg,
   "corte-desbaste-lixa": corteDesbasteImg,
-  "eletrodomesticos": eletricaImg,
+  "eletrodomesticos": eletrodomesticosImg,
   "elementos-fixacao": fixadoresImg,
   "elevacao-carga": amarracaoImg,
   "epi": segurancaImg,
-  "organizadores": construcaoCivilImg,
-  "pecas-automotivas": automotivaImg,
-  "quimicos-tintas": hidraulicaImg,
-  "sinalizacao": segurancaImg,
-  "termoplasticos-termofixos": fixadoresImg,
-  "casa-jardim": construcaoCivilImg,
+  "organizadores": organizadoresImg,
+  "pecas-automotivas": pecasAutomotivasImg,
+  "quimicos-tintas": quimicosTintasImg,
+  "sinalizacao": sinalizacaoImg,
+  "termoplasticos-termofixos": termoplasticosImg,
+  "casa-jardim": casaJardimImg,
   
   // Subcategorias Parafusos
   "parafusos/agricolas": agricolasImg,
