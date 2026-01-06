@@ -9,6 +9,7 @@ export interface Product {
 export interface Subcategoria {
   nome: string;
   slug: string;
+  imagem?: string;
   itens?: Subcategoria[];
 }
 
@@ -17,6 +18,7 @@ export interface Category {
   nome: string;
   slug: string;
   icon: string;
+  imagem?: string;
   descricao?: string;
   subcategorias?: Subcategoria[];
 }
