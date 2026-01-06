@@ -31,6 +31,9 @@ import ferramentasManuaisImg from "@/assets/catalogo/ferramentas/ferramentas-man
 import ferramentasPneumaticasImg from "@/assets/catalogo/ferramentas/ferramentas-pneumaticas.jpg";
 import ferramentasTornoImg from "@/assets/catalogo/ferramentas/ferramentas-torno.jpg";
 
+// Subcategorias Corte/Desbaste/Lixa
+import discoCorteImg from "@/assets/catalogo/corte-desbaste-lixa/disco-corte.jpg";
+
 // Mapeamento de slug da categoria para imagem
 export const categoryImages: Record<string, string> = {
   // Categorias principais
@@ -65,6 +68,9 @@ export const categoryImages: Record<string, string> = {
   "ferramentas/ferramentas-manuais": ferramentasManuaisImg,
   "ferramentas/ferramentas-pneumaticas": ferramentasPneumaticasImg,
   "ferramentas/ferramentas-torno": ferramentasTornoImg,
+  
+  // Subcategorias Corte/Desbaste/Lixa
+  "corte-desbaste-lixa/disco-corte": discoCorteImg,
 };
 
 // Função para obter imagem da categoria pelo slug
