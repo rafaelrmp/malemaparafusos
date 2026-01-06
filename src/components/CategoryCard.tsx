@@ -12,6 +12,7 @@ interface CategoryCardProps {
   descricao: string;
   icon: string;
   slug: string;
+  imagem?: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
@@ -36,15 +37,24 @@ const iconMap: Record<string, LucideIcon> = {
   "hard-hat": HardHat,
 };
 
-export const CategoryCard = ({ nome, descricao, icon, slug }: CategoryCardProps) => {
+export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCardProps) => {
   const Icon = iconMap[icon] || Wrench;
 
   return (
     <Link to={`/catalogo?categoria=${slug}`}>
       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
         <CardHeader className="text-center pb-2">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-            <Icon className="h-10 w-10 text-primary" />
+          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
+            {imagem ? (
+              <img 
+                src={imagem} 
+                alt={nome} 
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <Icon className="h-10 w-10 text-primary" />
+            )}
           </div>
           <CardTitle className="text-lg font-semibold">{nome}</CardTitle>
         </CardHeader>

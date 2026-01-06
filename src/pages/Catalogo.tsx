@@ -6,6 +6,7 @@ import { CategoryBreadcrumb } from "@/components/CategoryBreadcrumb";
 import { categorias, Subcategoria, Category } from "@/data/products";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight, MessageCircle } from "lucide-react";
+import { getCategoryImage } from "@/lib/categoryImages";
 
 const WHATSAPP_NUMBER = "5511940291064";
 
@@ -129,6 +130,7 @@ const Catalogo = () => {
                     descricao={(categoria as Category).descricao || `Produtos da categoria ${(categoria as Category).nome}`}
                     icon={(categoria as Category).icon}
                     slug={(categoria as Category).slug}
+                    imagem={getCategoryImage((categoria as Category).slug)}
                   />
                 ))}
               </div>
