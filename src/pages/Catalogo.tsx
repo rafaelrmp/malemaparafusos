@@ -169,6 +169,7 @@ const Catalogo = () => {
                   
                   // Final items - click to open WhatsApp
                   const whatsappUrl = getWhatsAppUrl(item.nome, data.breadcrumb);
+                  const itemImage = getCategoryImage(fullSlug);
                   return (
                     <a
                       key={item.slug}
@@ -177,6 +178,15 @@ const Catalogo = () => {
                       rel="noopener noreferrer"
                     >
                       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card/50 h-full hover:border-[#25D366]/50">
+                        {itemImage && (
+                          <div className="aspect-square overflow-hidden rounded-t-lg">
+                            <img 
+                              src={itemImage} 
+                              alt={item.nome}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        )}
                         <CardHeader className="pb-2">
                           <CardTitle className="text-base font-medium flex items-center gap-2 text-foreground/80 group-hover:text-[#25D366] transition-colors">
                             <MessageCircle className="w-4 h-4 text-[#25D366]" />
