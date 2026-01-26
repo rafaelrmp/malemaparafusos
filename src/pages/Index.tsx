@@ -5,6 +5,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { Button } from "@/components/ui/button";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import { categorias } from "@/data/products";
+import { getCategoryImage } from "@/lib/categoryImages";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
 
@@ -59,6 +60,7 @@ const Index = () => {
                   descricao={categoria.descricao || `Produtos da categoria ${categoria.nome}`}
                   icon={categoria.icon}
                   slug={categoria.slug}
+                  imagem={getCategoryImage(categoria.slug)}
                 />
               ))}
             </div>
