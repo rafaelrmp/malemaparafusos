@@ -1,138 +1,166 @@
 
-## Plano: Gerar Imagens para Todos os Subgrupos do Catálogo
+## Plano: Gerar Imagens para Subcategorias Restantes
 
-### Objetivo
-Criar imagens representativas para cada subcategoria do catálogo, seguindo o mesmo padrão utilizado para o "Disco de Corte" (200x200px, fundo neutro, visual profissional).
-
----
-
-### Subcategorias a Serem Criadas
-
-#### 1. PARAFUSOS (5 subgrupos)
-
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| **Agrícolas** | "Agricultural machinery screws and bolts, tractor wheel parts, farm equipment fasteners on grass background 200x200" | `parafusos/agricolas.jpg` |
-| **Arruelas** | "Metal washers collection, flat washers, spring washers, lock washers arranged on neutral background 200x200" | `parafusos/arruelas.jpg` |
-| **Parafusos** | "Various types of screws and bolts, hex head, allen, phillips screws collection on neutral background 200x200" | `parafusos/parafusos-tipos.jpg` |
-| **Porcas** | "Metal nuts collection, hex nuts, flange nuts, lock nuts arranged on neutral background 200x200" | `parafusos/porcas.jpg` |
-| **Parafusos Automotivos** | "Automotive bolts and screws, wheel studs, engine bolts, car fasteners on dark background 200x200" | `parafusos/parafusos-automotivos.jpg` |
+### Resumo
+Criar imagens fotográficas profissionais (200x200px, fundo neutro) para as 105 subcategorias que ainda nao possuem imagens no catalogo.
 
 ---
 
-#### 2. FERRAMENTAS (6 subgrupos)
+### Subcategorias a Serem Criadas por Categoria
 
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| **Ferramentas a Combustão** | "Gas powered tools, chainsaw, brush cutter, portable generator on outdoor background 200x200" | `ferramentas/ferramentas-combustao.jpg` |
-| **Ferramentas Automotivas** | "Automotive tools, socket wrench set, impact wrench, car mechanic tools on garage background 200x200" | `ferramentas/ferramentas-automotivas.jpg` |
-| **Ferramentas Elétricas** | "Electric power tools, drill, angle grinder, circular saw on workshop background 200x200" | `ferramentas/ferramentas-eletricas.jpg` |
-| **Ferramentas Manuais** | "Hand tools collection, hammers, pliers, screwdrivers, wrenches on workbench 200x200" | `ferramentas/ferramentas-manuais.jpg` |
-| **Ferramentas Pneumáticas** | "Pneumatic tools, air impact wrench, air compressor, spray gun on industrial background 200x200" | `ferramentas/ferramentas-pneumaticas.jpg` |
-| **Ferramentas p/ Torno** | "Lathe tools and inserts, carbide cutting tools, tool holders on metal background 200x200" | `ferramentas/ferramentas-torno.jpg` |
+#### 1. ELETRODOMESTICOS (2 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Acessorios Eletrodomesticos | `eletrodomesticos/acessorios-eletrodomesticos.jpg` |
+| Para a Casa | `eletrodomesticos/para-casa.jpg` |
+
+#### 2. ELEMENTOS DE FIXACAO (9 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Anel de Retencao | `elementos-fixacao/anel-retencao.jpg` |
+| Chavetas | `elementos-fixacao/chavetas.jpg` |
+| Cupilhas | `elementos-fixacao/cupilhas.jpg` |
+| Esfera de Aco | `elementos-fixacao/esfera-aco.jpg` |
+| Pino Elastico | `elementos-fixacao/pino-elastico.jpg` |
+| Rebites | `elementos-fixacao/rebites.jpg` |
+| Rosca Postica / Suplemento | `elementos-fixacao/rosca-postica-suplemento.jpg` |
+| Trava Externa | `elementos-fixacao/trava-externa.jpg` |
+| Trava Interna | `elementos-fixacao/trava-interna.jpg` |
+
+#### 3. ELEVACAO E CARGA (14 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Anilha / Sapatilha | `elevacao-carga/anilha-sapatilha.jpg` |
+| Cabo de Aco | `elevacao-carga/cabo-aco.jpg` |
+| Catraca para Amarracao | `elevacao-carga/catraca-amarracao.jpg` |
+| Clips para Cabo de Aco | `elevacao-carga/clips-cabo-aco.jpg` |
+| Corrente | `elevacao-carga/corrente.jpg` |
+| Esticador P/ Cabo | `elevacao-carga/esticador-cabo.jpg` |
+| Fita para Amarracao | `elevacao-carga/fita-amarracao.jpg` |
+| Gancho Olhal | `elevacao-carga/gancho-olhal.jpg` |
+| Guincho Eletrico | `elevacao-carga/guincho-eletrico.jpg` |
+| Manilha | `elevacao-carga/manilha.jpg` |
+| Moitao | `elevacao-carga/moitao.jpg` |
+| Olhal para Cabo Aco | `elevacao-carga/olhal-cabo-aco.jpg` |
+| Talha de Elevacao | `elevacao-carga/talha-elevacao.jpg` |
+| Tirfor | `elevacao-carga/tirfor.jpg` |
+
+#### 4. E.P.I (11 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Avental | `epi/avental.jpg` |
+| Botina | `epi/botina.jpg` |
+| Capacete | `epi/capacete.jpg` |
+| Cintos | `epi/cintos.jpg` |
+| Luvas | `epi/luvas.jpg` |
+| Mascaras | `epi/mascaras.jpg` |
+| Oculos | `epi/oculos.jpg` |
+| Protetor Auricular | `epi/protetor-auricular.jpg` |
+| Protetor Facial | `epi/protetor-facial.jpg` |
+| Protetor Solar | `epi/protetor-solar.jpg` |
+| Touca Soldador | `epi/touca-soldador.jpg` |
+
+#### 5. ORGANIZADORES (6 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Bandejas Magnetica | `organizadores/bandejas-magnetica.jpg` |
+| Bolsa de Cintura | `organizadores/bolsa-cintura.jpg` |
+| Caixa de Ferramentas | `organizadores/caixa-ferramentas.jpg` |
+| Carro de Ferramentas | `organizadores/carro-ferramentas.jpg` |
+| Gaveteiros | `organizadores/gaveteiros.jpg` |
+| Maleta e Bolsa de Ferramentas | `organizadores/maleta-bolsa-ferramentas.jpg` |
+
+#### 6. PECAS AUTOMOTIVAS (17 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Abracadeira Cano Injetor | `pecas-automotivas/abracadeira-cano-injetor.jpg` |
+| Acessorios para Hidraulicos | `pecas-automotivas/acessorios-hidraulicos.jpg` |
+| Bujao Carter | `pecas-automotivas/bujao-carter-auto.jpg` |
+| Calota Cubo | `pecas-automotivas/calota-cubo.jpg` |
+| Galao de Gasolina | `pecas-automotivas/galao-gasolina.jpg` |
+| Graxeiras | `pecas-automotivas/graxeiras.jpg` |
+| Molas | `pecas-automotivas/molas.jpg` |
+| Oleo Automotivo | `pecas-automotivas/oleo-automotivo.jpg` |
+| Parafusos de Cabecote | `pecas-automotivas/parafusos-cabecote.jpg` |
+| Parafusos e Porcas Geral | `pecas-automotivas/parafusos-porcas-geral.jpg` |
+| Pino de Centro | `pecas-automotivas/pino-centro.jpg` |
+| Presilhas Plastica | `pecas-automotivas/presilhas-plastica.jpg` |
+| Quebra Galho | `pecas-automotivas/quebra-galho.jpg` |
+| Sangrias | `pecas-automotivas/sangrias.jpg` |
+| Terminais Articulados | `pecas-automotivas/terminais-articulados.jpg` |
+| Tomadas 12V | `pecas-automotivas/tomadas-12v.jpg` |
+| Trava Aranha | `pecas-automotivas/trava-aranha.jpg` |
+
+#### 7. QUIMICOS / TINTAS (11 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Automotivos | `quimicos-tintas/quimicos-automotivos.jpg` |
+| Colas | `quimicos-tintas/colas.jpg` |
+| Graxas | `quimicos-tintas/graxas.jpg` |
+| Outros - Quimicos | `quimicos-tintas/outros-quimicos.jpg` |
+| Pasta Abrasiva | `quimicos-tintas/pasta-abrasiva.jpg` |
+| Primer | `quimicos-tintas/primer.jpg` |
+| Silicones | `quimicos-tintas/silicones.jpg` |
+| Thinner | `quimicos-tintas/thinner.jpg` |
+| Tinta Spray | `quimicos-tintas/tinta-spray.jpg` |
+| Vaselinas | `quimicos-tintas/vaselinas.jpg` |
+| Veda-Choque | `quimicos-tintas/veda-choque.jpg` |
+
+#### 8. SINALIZACAO (3 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Cone | `sinalizacao/cone.jpg` |
+| Corrente Plastica | `sinalizacao/corrente-plastica.jpg` |
+| Fita Zebrada | `sinalizacao/fita-zebrada.jpg` |
+
+#### 9. TERMOPLASTICOS E TERMOFIXOS (11 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Alavanca Plastica | `termoplasticos-termofixos/alavanca-plastica.jpg` |
+| Alavancas | `termoplasticos-termofixos/alavancas.jpg` |
+| Alca | `termoplasticos-termofixos/alca.jpg` |
+| Botoes | `termoplasticos-termofixos/botoes.jpg` |
+| Chave Fecho | `termoplasticos-termofixos/chave-fecho.jpg` |
+| Dobradicas Plasticas | `termoplasticos-termofixos/dobradicas-plasticas.jpg` |
+| Manipulos | `termoplasticos-termofixos/manipulos.jpg` |
+| Manopla | `termoplasticos-termofixos/manopla.jpg` |
+| Pe Nivelador | `termoplasticos-termofixos/pe-nivelador.jpg` |
+| Vibra-Stop | `termoplasticos-termofixos/vibra-stop.jpg` |
+| Volante 2 Raios | `termoplasticos-termofixos/volante-2-raios.jpg` |
+
+#### 10. CASA E JARDIM (21 imagens)
+| Subgrupo | Arquivo |
+|----------|---------|
+| Acessorios de Limpeza | `casa-jardim/acessorios-limpeza.jpg` |
+| Aparador de Grama | `casa-jardim/aparador-grama.jpg` |
+| Buchas | `casa-jardim/buchas.jpg` |
+| Cadeados | `casa-jardim/cadeados.jpg` |
+| Cordas | `casa-jardim/cordas.jpg` |
+| Esguicho de Agua | `casa-jardim/esguicho-agua.jpg` |
+| Extensao Eletrica | `casa-jardim/extensao-eletrica.jpg` |
+| Fechaduras Eletrica | `casa-jardim/fechaduras-eletrica.jpg` |
+| Ferragens em Geral | `casa-jardim/ferragens-geral.jpg` |
+| Fitas Adesivas | `casa-jardim/fitas-adesivas.jpg` |
+| Grampo Tapeceiro | `casa-jardim/grampo-tapeceiro.jpg` |
+| Lampadas | `casa-jardim/lampadas.jpg` |
+| Lanternas | `casa-jardim/lanternas.jpg` |
+| Lavadora de Alta Pressao | `casa-jardim/lavadora-alta-pressao.jpg` |
+| Manta Adesiva Asfaltica | `casa-jardim/manta-adesiva-asfaltica.jpg` |
+| Materiais Eletricos | `casa-jardim/materiais-eletricos.jpg` |
+| Pad Pintura | `casa-jardim/pad-pintura.jpg` |
+| Pincel | `casa-jardim/pincel.jpg` |
+| Registro de Gas | `casa-jardim/registro-gas.jpg` |
+| Rocadeiras | `casa-jardim/rocadeiras.jpg` |
+| Suportes | `casa-jardim/suportes.jpg` |
+| Cuidados Automotivos | `casa-jardim/cuidados-automotivos.jpg` |
 
 ---
 
-#### 3. ABRAÇADEIRAS (13 subgrupos)
+### Implementacao Tecnica
 
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| Abraçadeira para Canos | "Pipe clamps, metal tube clamps, plumbing clamps on neutral background 200x200" | `abracadeiras/abracadeira-canos.jpg` |
-| Bico Injetor | "Fuel injector clamps, nozzle clamps on engine background 200x200" | `abracadeiras/bico-injetor.jpg` |
-| Borracha | "Rubber lined clamps, cushioned pipe clamps on neutral background 200x200" | `abracadeiras/abracadeira-borracha.jpg` |
-| Canaleta | "Channel clamps, cable tray clamps on neutral background 200x200" | `abracadeiras/abracadeira-canaleta.jpg` |
-| Intercooler | "Intercooler hose clamps, turbo clamps on engine background 200x200" | `abracadeiras/abracadeira-intercooler.jpg` |
-| Mangote | "Large hose clamps, heavy duty tube clamps on industrial background 200x200" | `abracadeiras/abracadeira-mangote.jpg` |
-| Nylon | "Nylon cable ties, zip ties, plastic fasteners on neutral background 200x200" | `abracadeiras/abracadeira-nylon.jpg` |
-| Radial | "Radial clamps, ear clamps, crimp clamps on neutral background 200x200" | `abracadeiras/abracadeira-radial.jpg` |
-| Tipo Fita | "Band clamps, strap clamps, metal band fasteners on neutral background 200x200" | `abracadeiras/abracadeira-fita.jpg` |
-| Tipo Janela | "Window clamps, glass clamps on neutral background 200x200" | `abracadeiras/abracadeira-janela.jpg` |
-| Tipo Norma | "Worm gear hose clamps, German style clamps on neutral background 200x200" | `abracadeiras/abracadeira-norma.jpg` |
-| Tipo U | "U-bolt clamps, U-shaped pipe clamps on neutral background 200x200" | `abracadeiras/abracadeira-u.jpg` |
-| Tucho | "Push clamps, snap clamps on neutral background 200x200" | `abracadeiras/abracadeira-tucho.jpg` |
-
----
-
-#### 4. SOLDA (8 subgrupos)
-
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| Acessórios | "Welding accessories, electrode holder, ground clamp, welding torch on dark background 200x200" | `solda/acessorios-solda.jpg` |
-| Eletrodo / MMA | "Welding electrodes, stick welding rods, MMA consumables on dark background 200x200" | `solda/eletrodo-mma.jpg` |
-| Fluxo de Solda | "Welding flux, brazing flux, soldering paste on neutral background 200x200" | `solda/fluxo-solda.jpg` |
-| Maçaricos | "Gas torches, cutting torches, brazing torches with flames 200x200" | `solda/macaricos.jpg` |
-| MIG | "MIG welding wire spools, MIG gun, wire feeder on dark background 200x200" | `solda/mig.jpg` |
-| Plasma / Carvão | "Plasma cutter torch, carbon electrodes on dark background 200x200" | `solda/plasma-carvao.jpg` |
-| Regulador de Pressão | "Gas pressure regulators, oxygen acetylene regulators with gauges 200x200" | `solda/regulador-pressao.jpg` |
-| TIG | "TIG welding torch, tungsten electrodes, TIG cup on dark background 200x200" | `solda/tig.jpg` |
-
----
-
-#### 5. PERFURAÇÃO (7 subgrupos)
-
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| Brocas | "Drill bits set, HSS drill bits, wood and metal drills on neutral background 200x200" | `perfuracao/brocas.jpg` |
-| Cossinete | "Die threading tools, thread cutting dies on neutral background 200x200" | `perfuracao/cossinete.jpg` |
-| Fresas | "Milling cutters, end mills, carbide cutters on metal background 200x200" | `perfuracao/fresas.jpg` |
-| Macho Manual de Rosca | "Hand taps, thread taps, tap and die set on neutral background 200x200" | `perfuracao/macho-manual-rosca.jpg` |
-| Serra Copo | "Hole saws, bi-metal hole cutter, wood hole saw on neutral background 200x200" | `perfuracao/serra-copo.jpg` |
-| Talhadeiras/Ponteiras | "Cold chisels, punches, pointed chisels on neutral background 200x200" | `perfuracao/talhadeiras-ponteiras.jpg` |
-| Vazador | "Leather punch, hollow punch set, gasket cutters on neutral background 200x200" | `perfuracao/vazador.jpg` |
-
----
-
-#### 6. CORTE / DESBASTE / LIXA (15 subgrupos)
-
-| Subgrupo | Prompt da Imagem | Arquivo |
-|----------|------------------|---------|
-| Acessórios Corte / Lixa | "Cutting accessories, backing pads, arbors on neutral background 200x200" | `corte-desbaste-lixa/acessorios-corte-lixa.jpg` |
-| Disco de Corte | ✅ JÁ EXISTE | `corte-desbaste-lixa/disco-corte.jpg` |
-| Disco de Desbaste | "Grinding discs, metal grinding wheels with sparks 200x200" | `corte-desbaste-lixa/disco-desbaste.jpg` |
-| Disco de Lixa | "Sanding discs, abrasive discs, fiber discs on neutral background 200x200" | `corte-desbaste-lixa/disco-lixa.jpg` |
-| Disco Flap | "Flap discs, zirconia flap wheels on neutral background 200x200" | `corte-desbaste-lixa/disco-flap.jpg` |
-| Disco Serra Circular | "Circular saw blades, carbide tipped saw blade on wood background 200x200" | `corte-desbaste-lixa/disco-serra-circular.jpg` |
-| Disco Serra Mármore | "Diamond cutting blade, marble cutting disc on stone background 200x200" | `corte-desbaste-lixa/disco-serra-marmore.jpg` |
-| Escovas | "Wire brushes, cup brushes, wheel brushes on neutral background 200x200" | `corte-desbaste-lixa/escovas.jpg` |
-| Estilete | "Utility knives, box cutters, snap-off blade knives on neutral background 200x200" | `corte-desbaste-lixa/estilete.jpg` |
-| Fibra Abrasiva | "Abrasive fiber pads, non-woven abrasive on neutral background 200x200" | `corte-desbaste-lixa/fibra-abrasiva.jpg` |
-| Lâminas de Serra | "Saw blades, reciprocating saw blades, jigsaw blades on neutral background 200x200" | `corte-desbaste-lixa/laminas-serra.jpg` |
-| Lima | "Metal files, hand files set, bastard files on neutral background 200x200" | `corte-desbaste-lixa/lima.jpg` |
-| Lixas | "Sandpaper sheets, sanding belts, various grit sandpapers on neutral background 200x200" | `corte-desbaste-lixa/lixas.jpg` |
-| Ponta Montada | "Mounted points, grinding stones, rotary abrasives on neutral background 200x200" | `corte-desbaste-lixa/ponta-montada.jpg` |
-| Rebolo | "Grinding wheels, bench grinder wheels on neutral background 200x200" | `corte-desbaste-lixa/rebolo.jpg` |
-| Retificador Diamantado | "Diamond dressing tools, wheel dressers on neutral background 200x200" | `corte-desbaste-lixa/retificador-diamantado.jpg` |
-
----
-
-#### 7-16. Demais Categorias (resumo)
-
-| Categoria | Qtd Subgrupos | Pasta |
-|-----------|---------------|-------|
-| ELETRODOMÉSTICOS | 2 | `eletrodomesticos/` |
-| ELEMENTOS DE FIXAÇÃO | 9 | `elementos-fixacao/` |
-| ELEVAÇÃO E CARGA | 14 | `elevacao-carga/` |
-| E.P.I | 11 | `epi/` |
-| ORGANIZADORES | 6 | `organizadores/` |
-| PEÇAS AUTOMOTIVAS | 17 | `pecas-automotivas/` |
-| QUÍMICOS / TINTAS | 11 | `quimicos-tintas/` |
-| SINALIZAÇÃO | 3 | `sinalizacao/` |
-| TERMOPLÁSTICOS | 11 | `termoplasticos-termofixos/` |
-| CASA E JARDIM | 21 | `casa-jardim/` |
-
----
-
-### Implementação Técnica
-
-#### 1. Criar Pastas para Subcategorias
+#### Etapa 1: Criar estrutura de pastas
 ```
 src/assets/catalogo/
-├── parafusos/
-├── ferramentas/
-├── abracadeiras/
-├── solda/
-├── perfuracao/
-├── corte-desbaste-lixa/
 ├── eletrodomesticos/
 ├── elementos-fixacao/
 ├── elevacao-carga/
@@ -145,71 +173,44 @@ src/assets/catalogo/
 └── casa-jardim/
 ```
 
-#### 2. Gerar Imagens via AI
-Usar o modelo `flux.schnell` para gerar cada imagem com prompts específicos.
+#### Etapa 2: Gerar imagens com IA
+Usar o modelo `google/gemini-2.5-flash-image` para gerar cada imagem com prompts especificos no estilo fotografico profissional.
 
-#### 3. Atualizar `src/lib/categoryImages.ts`
-Adicionar imports e mapeamentos para cada subcategoria:
-
-```typescript
-// Exemplo de estrutura
-import agricolasImg from "@/assets/catalogo/parafusos/agricolas.jpg";
-import arruelasImg from "@/assets/catalogo/parafusos/arruelas.jpg";
-// ... demais imports
-
-export const categoryImages: Record<string, string> = {
-  // ... categorias principais existentes
-  
-  // Subcategorias Parafusos
-  "parafusos/agricolas": agricolasImg,
-  "parafusos/arruelas": arruelasImg,
-  // ... demais mapeamentos
-};
-```
+#### Etapa 3: Atualizar `src/lib/categoryImages.ts`
+Adicionar imports e mapeamentos para cada nova subcategoria.
 
 ---
 
-### Total de Imagens a Gerar
+### Resumo de Quantidades
 
 | Categoria | Quantidade |
 |-----------|------------|
-| Parafusos | 5 |
-| Ferramentas | 6 |
-| Abraçadeiras | 13 |
-| Solda | 8 |
-| Perfuração | 7 |
-| Corte/Desbaste/Lixa | 15 (14 novas + 1 existente) |
-| Eletrodomésticos | 2 |
-| Elementos de Fixação | 9 |
-| Elevação e Carga | 14 |
+| Eletrodomesticos | 2 |
+| Elementos de Fixacao | 9 |
+| Elevacao e Carga | 14 |
 | E.P.I | 11 |
 | Organizadores | 6 |
-| Peças Automotivas | 17 |
-| Químicos/Tintas | 11 |
-| Sinalização | 3 |
-| Termoplásticos | 11 |
+| Pecas Automotivas | 17 |
+| Quimicos/Tintas | 11 |
+| Sinalizacao | 3 |
+| Termoplasticos | 11 |
 | Casa e Jardim | 21 |
-| **TOTAL** | **~159 imagens** |
+| **TOTAL** | **105 imagens** |
 
 ---
 
-### Estratégia de Execução
+### Estrategia de Execucao
 
-Devido ao grande número de imagens, a implementação será feita em etapas:
+Devido ao grande numero de imagens, a implementacao sera feita em lotes:
 
-1. **Etapa 1**: Subcategorias de PARAFUSOS (5 imagens)
-2. **Etapa 2**: Subcategorias de FERRAMENTAS (6 imagens)
-3. **Etapa 3**: Subcategorias de SOLDA + PERFURAÇÃO (15 imagens)
-4. **Etapa 4**: Demais categorias (em lotes)
+1. **Lote 1**: Eletrodomesticos + Elementos Fixacao + Sinalizacao (14 imagens)
+2. **Lote 2**: E.P.I + Organizadores (17 imagens)
+3. **Lote 3**: Elevacao e Carga (14 imagens)
+4. **Lote 4**: Pecas Automotivas (17 imagens)
+5. **Lote 5**: Quimicos/Tintas + Termoplasticos (22 imagens)
+6. **Lote 6**: Casa e Jardim (21 imagens)
 
-Cada etapa incluirá:
-- Geração das imagens
-- Atualização do arquivo `categoryImages.ts`
-- Verificação no catálogo
-
----
-
-### Resultado Esperado
-
-Ao navegar pelo catálogo, cada subcategoria exibirá uma imagem representativa do seu conteúdo, facilitando a identificação visual dos produtos pelos clientes.
-
+Cada lote incluira:
+- Geracao das imagens via IA
+- Atualizacao do arquivo `categoryImages.ts`
+- Verificacao visual no catalogo
