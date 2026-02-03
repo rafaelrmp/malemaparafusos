@@ -145,22 +145,32 @@ const Catalogo = () => {
                   
                   // Items with children are clickable, final items are just displayed
                   if (hasChildren) {
+                    const subcategoryImage = getCategoryImage(fullSlug);
                     return (
                       <Link 
                         key={item.slug} 
                         to={`/catalogo?categoria=${fullSlug}`}
                       >
                         <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
-                          <CardHeader className="pb-2">
-                            <CardTitle className="text-lg font-semibold flex items-center justify-between">
-                              <span>{item.nome}</span>
-                              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent className="pt-0">
-                            <p className="text-sm text-muted-foreground">
-                              {item.itens!.length} {item.itens!.length === 1 ? "item" : "itens"}
-                            </p>
+                          <CardContent className="p-4 flex items-center gap-4">
+                            {subcategoryImage && (
+                              <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                                <img 
+                                  src={subcategoryImage} 
+                                  alt={item.nome}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                            )}
+                            <div className="flex-1 min-w-0">
+                              <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                                {item.nome}
+                              </h3>
+                              <p className="text-sm text-muted-foreground">
+                                {item.itens!.length} {item.itens!.length === 1 ? "item" : "itens"}
+                              </p>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                           </CardContent>
                         </Card>
                       </Link>
