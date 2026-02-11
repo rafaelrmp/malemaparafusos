@@ -188,21 +188,23 @@ const Catalogo = () => {
                       rel="noopener noreferrer"
                     >
                       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card/50 h-full hover:border-[#25D366]/50">
-                        {itemImage && (
-                          <div className="aspect-square overflow-hidden rounded-t-lg">
-                            <img 
-                              src={itemImage} 
-                              alt={item.nome}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
+                        <CardContent className="p-4 flex items-center gap-4">
+                          {itemImage && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                              <img 
+                                src={itemImage} 
+                                alt={item.nome}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-base font-medium text-foreground/80 group-hover:text-[#25D366] transition-colors">
+                              {item.nome}
+                            </h3>
                           </div>
-                        )}
-                        <CardHeader className="pb-2">
-                          <CardTitle className="text-base font-medium flex items-center gap-2 text-foreground/80 group-hover:text-[#25D366] transition-colors">
-                            <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                            <span>{item.nome}</span>
-                          </CardTitle>
-                        </CardHeader>
+                          <MessageCircle className="w-5 h-5 text-[#25D366] flex-shrink-0" />
+                        </CardContent>
                       </Card>
                     </a>
                   );
