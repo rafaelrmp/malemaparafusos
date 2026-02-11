@@ -17,7 +17,7 @@ import termoplasticosImg from "@/assets/catalogo/termoplasticos.jpg";
 import casaJardimImg from "@/assets/catalogo/casa-jardim.jpg";
 
 // Subcategorias Parafusos
-import agricolasImg from "@/assets/catalogo/parafusos/agricolas.jpg";
+
 import arruelasImg from "@/assets/catalogo/parafusos/arruelas.jpg";
 import arruelaAluminioImg from "@/assets/catalogo/parafusos/arruela-aluminio.jpg";
 import arruelaCabecoteImg from "@/assets/catalogo/parafusos/arruela-cabecote.jpg";
@@ -239,7 +239,7 @@ export const categoryImages: Record<string, string> = {
   "casa-jardim": casaJardimImg,
   
   // Subcategorias Parafusos
-  "parafusos/agricolas": agricolasImg,
+  
   "parafusos/arruelas": arruelasImg,
   "parafusos/parafusos-tipos": parafusosTiposImg,
   "parafusos/porcas": porcasImg,

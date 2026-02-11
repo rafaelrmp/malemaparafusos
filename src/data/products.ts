@@ -31,30 +31,7 @@ export const categorias: Category[] = [
     icon: "wrench",
     descricao: "Linha completa de parafusos para todas as aplicações industriais, comerciais e agrícolas",
     subcategorias: [
-      {
-        nome: "Agrícolas",
-        slug: "agricolas",
-        itens: [
-          { nome: "Parafuso Aro Roda", slug: "parafuso-aro-roda" },
-          { nome: "Parafuso Correia Elevadora", slug: "parafuso-correia-elevadora" },
-          { nome: "Parafuso de Grade Arado", slug: "parafuso-grade-arado" },
-          { nome: "Parafuso e Porca Esteira", slug: "parafuso-porca-esteira" },
-          { nome: "Parafuso Faca Colheitadeira", slug: "parafuso-faca-colheitadeira" },
-          { nome: "Parafuso Lâmina", slug: "parafuso-lamina" },
-          { nome: "Parafuso Mancal", slug: "parafuso-mancal" },
-          { nome: "Parafuso Peso Roda", slug: "parafuso-peso-roda" },
-          { nome: "Parafuso Roçadeira", slug: "parafuso-rocadeira" },
-          { nome: "Parafuso Roda Agrícola", slug: "parafuso-roda-agricola" },
-          { nome: "Parafusos Cravo", slug: "parafusos-cravo" },
-          { nome: "Parafuso Silo", slug: "parafuso-silo" },
-          { nome: "Pino", slug: "pino" },
-          { nome: "Pino R", slug: "pino-r" },
-          { nome: "Porca da Carreta", slug: "porca-carreta" },
-          { nome: "Quebra Dedo", slug: "quebra-dedo" },
-          { nome: "Trava Joaninha", slug: "trava-joaninha" },
-          { nome: "Trava Pino R", slug: "trava-pino-r" }
-        ]
-      },
+      
       {
         nome: "Arruelas",
         slug: "arruelas",
