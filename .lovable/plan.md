@@ -1,21 +1,37 @@
 
 
-## Padronizar imagens das subcategorias como icones compactos
+## Adicionar imagens aos itens de Parafusos
 
-### Problema
-As imagens dos itens finais (como as arruelas individuais) estao sendo exibidas em tamanho grande (`aspect-square`, ocupando toda a largura do card). O usuario quer que todas as subcategorias usem o mesmo layout compacto com icone pequeno ao lado do nome, como ja acontece com as subcategorias que tem filhos (ex: "Arruelas - 9 itens").
+### Mapeamento imagem -> item
 
-### Solucao
-Alterar a renderizacao dos **itens finais** (sem filhos) no `Catalogo.tsx` para usar o mesmo layout de card compacto com imagem pequena (60x60 ou 80x80px) ao lado do texto, em vez do layout com imagem grande em `aspect-square`.
+| Item | Slug | Imagem |
+|------|------|--------|
+| Parafuso Frances | `parafuso-frances` | image-9.png |
+| Barra Roscada | `barra-roscada` | image-10.png |
+| Parafusos Fendados | `parafusos-fendados` | image-11.png |
+| Parabolt / Chumbador | `parabolt-chumbador` | image-12.png |
+| Parafusos Brocante | `parafusos-brocante` | image-13.png |
+| Parafusos Inoxidaveis | `parafusos-inoxidaveis` | image-14.png |
+| Rosca Soberba | `rosca-soberba` | image-15.png |
 
-### Alteracao no arquivo `src/pages/Catalogo.tsx`
+Nota: "parafuso fendados" e "parafuso fendado" sao o mesmo item no catalogo (`parafusos-fendados`), entao 7 imagens para 7 itens finais.
 
-Substituir o bloco de renderizacao dos itens finais (linhas ~175-200) que usa `aspect-square` por um layout horizontal compacto similar ao das subcategorias com filhos:
+### Etapas
 
-- Imagem pequena `w-16 h-16` com `rounded-lg` e fundo escuro
-- Nome do item ao lado da imagem
-- Icone do WhatsApp mantido
-- Remover o `aspect-square` e o `CardHeader` separado
+1. Copiar as 7 imagens para `src/assets/catalogo/parafusos/` com nomes correspondentes aos slugs
+2. Adicionar imports e mapeamentos em `src/lib/categoryImages.ts` usando o padrao de slug completo `parafusos/parafusos-tipos/[slug]`
 
-O resultado visual sera um card horizontal compacto com a imagem como icone, identico ao exemplo fornecido pelo usuario.
+### Detalhes tecnicos
+
+**Arquivos criados:**
+- `src/assets/catalogo/parafusos/parafuso-frances.jpg`
+- `src/assets/catalogo/parafusos/barra-roscada.jpg`
+- `src/assets/catalogo/parafusos/parafusos-fendados.jpg`
+- `src/assets/catalogo/parafusos/parabolt-chumbador.jpg`
+- `src/assets/catalogo/parafusos/parafusos-brocante.jpg`
+- `src/assets/catalogo/parafusos/parafusos-inoxidaveis.jpg`
+- `src/assets/catalogo/parafusos/rosca-soberba.jpg`
+
+**Arquivo editado:**
+- `src/lib/categoryImages.ts` - adicionar 7 imports e 7 entradas no mapeamento
 
