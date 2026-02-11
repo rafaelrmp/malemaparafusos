@@ -19,6 +19,15 @@ import casaJardimImg from "@/assets/catalogo/casa-jardim.jpg";
 // Subcategorias Parafusos
 import agricolasImg from "@/assets/catalogo/parafusos/agricolas.jpg";
 import arruelasImg from "@/assets/catalogo/parafusos/arruelas.jpg";
+import arruelaAluminioImg from "@/assets/catalogo/parafusos/arruela-aluminio.jpg";
+import arruelaCabecoteImg from "@/assets/catalogo/parafusos/arruela-cabecote.jpg";
+import arruelaCobreImg from "@/assets/catalogo/parafusos/arruela-cobre.jpg";
+import arruelaEncostoImg from "@/assets/catalogo/parafusos/arruela-encosto.jpg";
+import arruelaFibraImg from "@/assets/catalogo/parafusos/arruela-fibra.jpg";
+import arruelaDentadaImg from "@/assets/catalogo/parafusos/arruela-dentada.jpg";
+import arruelaPressaoImg from "@/assets/catalogo/parafusos/arruela-pressao.jpg";
+import arruelaLisaImg from "@/assets/catalogo/parafusos/arruela-lisa.jpg";
+import arruelaOnduladaImg from "@/assets/catalogo/parafusos/arruela-ondulada.jpg";
 import parafusosTiposImg from "@/assets/catalogo/parafusos/parafusos-tipos.jpg";
 import porcasImg from "@/assets/catalogo/parafusos/porcas.jpg";
 import parafusosAutomotivosImg from "@/assets/catalogo/parafusos/parafusos-automotivos.jpg";
@@ -235,6 +244,15 @@ export const categoryImages: Record<string, string> = {
   "parafusos/parafusos-tipos": parafusosTiposImg,
   "parafusos/porcas": porcasImg,
   "parafusos/parafusos-automotivos": parafusosAutomotivosImg,
+  "parafusos/arruelas/arruela-aluminio": arruelaAluminioImg,
+  "parafusos/arruelas/arruela-cabecote": arruelaCabecoteImg,
+  "parafusos/arruelas/arruela-cobre": arruelaCobreImg,
+  "parafusos/arruelas/arruela-encosto": arruelaEncostoImg,
+  "parafusos/arruelas/arruela-fibra": arruelaFibraImg,
+  "parafusos/arruelas/arruela-dentada": arruelaDentadaImg,
+  "parafusos/arruelas/arruela-pressao": arruelaPressaoImg,
+  "parafusos/arruelas/arruela-lisa": arruelaLisaImg,
+  "parafusos/arruelas/arruela-ondulada": arruelaOnduladaImg,
   
   // Subcategorias Ferramentas
   "ferramentas/ferramentas-combustao": ferramentasCombustaoImg,
