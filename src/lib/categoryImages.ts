@@ -31,6 +31,13 @@ import arruelaOnduladaImg from "@/assets/catalogo/parafusos/arruela-ondulada.jpg
 import parafusosTiposImg from "@/assets/catalogo/parafusos/parafusos-tipos.jpg";
 import porcasImg from "@/assets/catalogo/parafusos/porcas.jpg";
 import parafusosAutomotivosImg from "@/assets/catalogo/parafusos/parafusos-automotivos.jpg";
+import parafusoFrancesImg from "@/assets/catalogo/parafusos/parafuso-frances.jpg";
+import barraRoscadaImg from "@/assets/catalogo/parafusos/barra-roscada.jpg";
+import parafusosFendadosImg from "@/assets/catalogo/parafusos/parafusos-fendados.jpg";
+import paraboltChumbadorImg from "@/assets/catalogo/parafusos/parabolt-chumbador.jpg";
+import parafusosBrocanteImg from "@/assets/catalogo/parafusos/parafusos-brocante.jpg";
+import parafusosInoxidaveisImg from "@/assets/catalogo/parafusos/parafusos-inoxidaveis.jpg";
+import roscaSoberbaImg from "@/assets/catalogo/parafusos/rosca-soberba.jpg";
 
 // Subcategorias Ferramentas
 import ferramentasCombustaoImg from "@/assets/catalogo/ferramentas/ferramentas-combustao.jpg";
@@ -253,7 +260,14 @@ export const categoryImages: Record<string, string> = {
   "parafusos/arruelas/arruela-pressao": arruelaPressaoImg,
   "parafusos/arruelas/arruela-lisa": arruelaLisaImg,
   "parafusos/arruelas/arruela-ondulada": arruelaOnduladaImg,
-  
+  "parafusos/parafusos-tipos/parafuso-frances": parafusoFrancesImg,
+  "parafusos/parafusos-tipos/barra-roscada": barraRoscadaImg,
+  "parafusos/parafusos-tipos/parafusos-fendados": parafusosFendadosImg,
+  "parafusos/parafusos-tipos/parabolt-chumbador": paraboltChumbadorImg,
+  "parafusos/parafusos-tipos/parafusos-brocante": parafusosBrocanteImg,
+  "parafusos/parafusos-tipos/parafusos-inoxidaveis": parafusosInoxidaveisImg,
+  "parafusos/parafusos-tipos/rosca-soberba": roscaSoberbaImg,
+
   // Subcategorias Ferramentas
   "ferramentas/ferramentas-combustao": ferramentasCombustaoImg,
   "ferramentas/ferramentas-automotivas": ferramentasAutomotivasImg,
