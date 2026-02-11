@@ -38,6 +38,10 @@ import paraboltChumbadorImg from "@/assets/catalogo/parafusos/parabolt-chumbador
 import parafusosBrocanteImg from "@/assets/catalogo/parafusos/parafusos-brocante.jpg";
 import parafusosInoxidaveisImg from "@/assets/catalogo/parafusos/parafusos-inoxidaveis.jpg";
 import roscaSoberbaImg from "@/assets/catalogo/parafusos/rosca-soberba.jpg";
+import allenCabecaChataImg from "@/assets/catalogo/parafusos/allen-cabeca-chata.jpg";
+import allenCilindricaMmImg from "@/assets/catalogo/parafusos/allen-cilindrica-mm.jpg";
+import allenCilindricaPolegadaImg from "@/assets/catalogo/parafusos/allen-cilindrica-polegada.jpg";
+import allenSemCabecaImg from "@/assets/catalogo/parafusos/allen-sem-cabeca.jpg";
 
 // Subcategorias Ferramentas
 import ferramentasCombustaoImg from "@/assets/catalogo/ferramentas/ferramentas-combustao.jpg";
@@ -267,6 +271,10 @@ export const categoryImages: Record<string, string> = {
   "parafusos/parafusos-tipos/parafusos-brocante": parafusosBrocanteImg,
   "parafusos/parafusos-tipos/parafusos-inoxidaveis": parafusosInoxidaveisImg,
   "parafusos/parafusos-tipos/rosca-soberba": roscaSoberbaImg,
+  "parafusos/parafusos-tipos/parafuso-allen/allen-cabeca-chata": allenCabecaChataImg,
+  "parafusos/parafusos-tipos/parafuso-allen/allen-cilindrica-mm": allenCilindricaMmImg,
+  "parafusos/parafusos-tipos/parafuso-allen/allen-cilindrica-polegada": allenCilindricaPolegadaImg,
+  "parafusos/parafusos-tipos/parafuso-allen/allen-sem-cabeca": allenSemCabecaImg,
 
   // Subcategorias Ferramentas
   "ferramentas/ferramentas-combustao": ferramentasCombustaoImg,
