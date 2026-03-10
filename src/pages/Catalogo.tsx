@@ -145,7 +145,7 @@ const Catalogo = () => {
                   
                   // Items with children are clickable, final items are just displayed
                   if (hasChildren) {
-                    const subcategoryImage = getCategoryImage(fullSlug);
+                    const subcategoryImage = getCategoryImage(item.nome);
                     return (
                       <Link 
                         key={item.slug} 
