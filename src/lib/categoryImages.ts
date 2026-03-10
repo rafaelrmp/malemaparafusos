@@ -219,6 +219,7 @@ export const getCategoryImage = (nome: string): string | undefined => {
   // Para itens do tipo "Outros" com subpasta (ex: "Talhadeiras/Ponteiras.jpg")
   // e para itens com "/" no nome do arquivo (ex: "Anilha / Sapatilha.jpg")
   const folder = fileToFolder[fileName];
+  console.log(`[IMG DEBUG] nome="${nome}" fileName="${fileName}" folder="${folder}"`);
 
   if (folder) {
     if (folder.startsWith("Outros/")) {
