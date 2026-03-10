@@ -211,11 +211,7 @@ export const getCategoryImage = (nome: string): string | undefined => {
   const mappedPath = dynamicImageMap[nome];
   if (!mappedPath) return undefined;
 
-  // Extrai o nome do arquivo (ex: "/catalogo-pronto/Alicate de Pressão.jpg" → "Alicate de Pressão.jpg")
   const fileName = mappedPath.replace("/catalogo-pronto/", "");
-
-  // Para itens do tipo "Outros" com subpasta (ex: "Talhadeiras/Ponteiras.jpg")
-  // e para itens com "/" no nome do arquivo (ex: "Anilha / Sapatilha.jpg")
   const folder = fileToFolder[fileName];
 
   if (folder) {
