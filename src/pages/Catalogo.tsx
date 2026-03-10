@@ -130,7 +130,7 @@ const Catalogo = () => {
                     descricao={(categoria as Category).descricao || `Produtos da categoria ${(categoria as Category).nome}`}
                     icon={(categoria as Category).icon}
                     slug={(categoria as Category).slug}
-                    imagem={getCategoryImage((categoria as Category).slug)}
+                    imagem={getCategoryImage((categoria as Category).nome)}
                   />
                 ))}
               </div>
