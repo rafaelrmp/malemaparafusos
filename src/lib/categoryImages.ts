@@ -209,9 +209,11 @@ const fileToFolder: Record<string, string> = {
  */
 export const getCategoryImage = (nome: string): string | undefined => {
   const mappedPath = dynamicImageMap[nome];
-  if (!mappedPath) return undefined;
+  if (!mappedPath) {
+    console.log(`[IMG DEBUG] No mapping for: "${nome}"`);
+    return undefined;
+  }
 
-  // Extrai o nome do arquivo (ex: "/catalogo-pronto/Alicate de Pressão.jpg" → "Alicate de Pressão.jpg")
   const fileName = mappedPath.replace("/catalogo-pronto/", "");
 
   // Para itens do tipo "Outros" com subpasta (ex: "Talhadeiras/Ponteiras.jpg")
