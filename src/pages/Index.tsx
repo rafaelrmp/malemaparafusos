@@ -60,7 +60,7 @@ const Index = () => {
                   descricao={categoria.descricao || `Produtos da categoria ${categoria.nome}`}
                   icon={categoria.icon}
                   slug={categoria.slug}
-                  imagem={getCategoryImage(categoria.slug)}
+                  imagem={getCategoryImage(categoria.nome)}
                 />
               ))}
             </div>
