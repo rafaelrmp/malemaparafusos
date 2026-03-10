@@ -147,6 +147,35 @@ const fileToFolder: Record<string, string> = {
   "Terminais Articulados.jpg": "PEAS AUTOMOTIVAS", "Tomadas 12V.jpg": "PEAS AUTOMOTIVAS",
   "Trava Aranha.jpg": "PEAS AUTOMOTIVAS", "Óleo Automotivo.jpg": "PEAS AUTOMOTIVAS",
 
+  // SINALIZAO
+  "Cone.jpg": "SINALIZAO", "Corrente Plástica.jpg": "SINALIZAO", "Fita Zebrada.jpg": "SINALIZAO",
+
+  // QUMICOS  TINTAS (double space in folder name)
+  "Automotivos.jpg": "QUMICOS  TINTAS", "Colas.jpg": "QUMICOS  TINTAS", "Graxas.jpg": "QUMICOS  TINTAS",
+  "Pasta Abrasiva.jpg": "QUMICOS  TINTAS", "Primer.jpg": "QUMICOS  TINTAS", "Silicones.jpg": "QUMICOS  TINTAS",
+  "Thinner.jpg": "QUMICOS  TINTAS", "Tinta Spray.jpg": "QUMICOS  TINTAS", "Vaselinas.jpg": "QUMICOS  TINTAS",
+  "Veda-Choque.jpg": "QUMICOS  TINTAS",
+
+  // CASA E JARDIM
+  "Aparador de Grama.jpg": "CASA E JARDIM", "Buchas.jpg": "CASA E JARDIM", "Cadeados.jpg": "CASA E JARDIM",
+  "Cordas.jpg": "CASA E JARDIM", "Desengraxantes.jpg": "CASA E JARDIM", "Escova Limpeza Detalhada.jpg": "CASA E JARDIM",
+  "Escova para Limpeza.jpg": "CASA E JARDIM", "Esguicho de Água.jpg": "CASA E JARDIM", "Espátulas de Aço.jpg": "CASA E JARDIM",
+  "Extensão Elétrica.jpg": "CASA E JARDIM", "Fechaduras Elétrica.jpg": "CASA E JARDIM", "Fita Dupla Face.jpg": "CASA E JARDIM",
+  "Grampo Tapeceiro.jpg": "CASA E JARDIM", "Kit Acessórios para Limpeza.jpg": "CASA E JARDIM", "Lanternas.jpg": "CASA E JARDIM",
+  "Lavadora de Alta Pressão.jpg": "CASA E JARDIM", "Lâmpadas.jpg": "CASA E JARDIM", "Manta Adesiva Asfáltica.jpg": "CASA E JARDIM",
+  "Pad Pintura.jpg": "CASA E JARDIM", "Pincel.jpg": "CASA E JARDIM", "Pulverizador de Sabão.jpg": "CASA E JARDIM",
+  "Registro de Gás.jpg": "CASA E JARDIM", "Rodos.jpg": "CASA E JARDIM", "Roçadeiras.jpg": "CASA E JARDIM",
+  "Suportes.jpg": "CASA E JARDIM", "Toalhas de Microfibra.jpg": "CASA E JARDIM", "Tubo Espaguete Isolante.jpg": "CASA E JARDIM",
+  "Vassouras.jpg": "CASA E JARDIM",
+
+  // TERMOPLSTICOS E TERMOFIXOS
+  "Alavanca Plástica.jpg": "TERMOPLSTICOS E TERMOFIXOS", "Alavancas.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+  "Alça.jpg": "TERMOPLSTICOS E TERMOFIXOS", "Botões.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+  "Chave Fecho.jpg": "TERMOPLSTICOS E TERMOFIXOS", "Dobradiças Plásticas.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+  "Manopla.jpg": "TERMOPLSTICOS E TERMOFIXOS", "Manípulos.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+  "Pé Nivelador.jpg": "TERMOPLSTICOS E TERMOFIXOS", "Vibra-Stop.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+  "Volante 2 Raios.jpg": "TERMOPLSTICOS E TERMOFIXOS",
+
   // Outros (subpastas compostas)
   "Anilha / Sapatilha.jpg": "Outros/Anilha",
   "Bico Limpeza / Pulverizador.jpg": "Outros/Bico Limpeza",

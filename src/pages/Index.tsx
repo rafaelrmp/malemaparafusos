@@ -8,6 +8,17 @@ import { categorias } from "@/data/products";
 import { getCategoryImage } from "@/lib/categoryImages";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
+import categoryParafusos from "@/assets/category-parafusos.png";
+import categoryElementosFixacao from "@/assets/category-elementos-fixacao.png";
+import categoryAbracadeiras from "@/assets/category-abracadeiras.png";
+import categoryCorteDesbasteLixa from "@/assets/category-corte-desbaste-lixa.png";
+
+const categoryImageOverrides: Record<string, string> = {
+  "PARAFUSOS": categoryParafusos,
+  "ELEMENTOS DE FIXAÇÃO": categoryElementosFixacao,
+  "ABRAÇADEIRAS": categoryAbracadeiras,
+  "CORTE / DESBASTE / LIXA": categoryCorteDesbasteLixa,
+};
 
 const Index = () => {
   const beneficios = [
@@ -60,7 +71,7 @@ const Index = () => {
                   descricao={categoria.descricao || `Produtos da categoria ${categoria.nome}`}
                   icon={categoria.icon}
                   slug={categoria.slug}
-                  imagem={getCategoryImage(categoria.nome)}
+                  imagem={categoryImageOverrides[categoria.nome] || getCategoryImage(categoria.nome)}
                 />
               ))}
             </div>
