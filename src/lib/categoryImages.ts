@@ -219,21 +219,19 @@ export const getCategoryImage = (nome: string): string | undefined => {
   const folder = fileToFolder[fileName];
 
   if (folder) {
-    // Para subpastas compostas (Outros/Anilha etc), o fileName contém "/" 
-    // que é o nome real do arquivo na subpasta
     if (folder.startsWith("Outros/")) {
-      // Dentro de Outros, os nomes dos arquivos são a parte depois do " / "
-      // Ex: "Anilha / Sapatilha.jpg" está em Outros/Anilha/Sapatilha.jpg
+      // Encode each path segment separately to preserve "/"
+      const folderEncoded = folder.split("/").map(encodeURIComponent).join("/");
+      
+      // "Anilha / Sapatilha.jpg" → file is "Sapatilha.jpg" inside Outros/Anilha
       const parts = fileName.split(" / ");
       if (parts.length === 2) {
-        // fileName = "Anilha / Sapatilha.jpg" → folder=Outros/Anilha, file=Sapatilha.jpg
-        const actualFile = parts[1]; // "Sapatilha.jpg"
-        return GITHUB_BASE_URL + encodeURIComponent(folder) + "/" + encodeURIComponent(actualFile);
+        return GITHUB_BASE_URL + folderEncoded + "/" + encodeURIComponent(parts[1]);
       }
-      // Para "Talhadeiras/Ponteiras.jpg"
+      // "Talhadeiras/Ponteiras.jpg" → file is "Ponteiras.jpg" inside Outros/Talhadeiras
       const slashParts = fileName.split("/");
       if (slashParts.length === 2) {
-        return GITHUB_BASE_URL + encodeURIComponent(folder) + "/" + encodeURIComponent(slashParts[1]);
+        return GITHUB_BASE_URL + folderEncoded + "/" + encodeURIComponent(slashParts[1]);
       }
     }
     return GITHUB_BASE_URL + encodeURIComponent(folder) + "/" + encodeURIComponent(fileName);
