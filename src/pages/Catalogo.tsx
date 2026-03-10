@@ -130,7 +130,7 @@ const Catalogo = () => {
                     descricao={(categoria as Category).descricao || `Produtos da categoria ${(categoria as Category).nome}`}
                     icon={(categoria as Category).icon}
                     slug={(categoria as Category).slug}
-                    imagem={getCategoryImage((categoria as Category).slug)}
+                    imagem={getCategoryImage((categoria as Category).nome)}
                   />
                 ))}
               </div>
@@ -145,7 +145,7 @@ const Catalogo = () => {
                   
                   // Items with children are clickable, final items are just displayed
                   if (hasChildren) {
-                    const subcategoryImage = getCategoryImage(fullSlug);
+                    const subcategoryImage = getCategoryImage(item.nome);
                     return (
                       <Link 
                         key={item.slug} 
@@ -179,7 +179,7 @@ const Catalogo = () => {
                   
                   // Final items - click to open WhatsApp
                   const whatsappUrl = getWhatsAppUrl(item.nome, data.breadcrumb);
-                  const itemImage = getCategoryImage(fullSlug);
+                  const itemImage = getCategoryImage(item.nome);
                   return (
                     <a
                       key={item.slug}
