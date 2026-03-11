@@ -1,5 +1,6 @@
 import { useSearchParams, Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
+import { preloadImages, CachedImage } from "@/components/CachedImage";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CategoryCard } from "@/components/CategoryCard";
@@ -84,7 +85,18 @@ const Catalogo = () => {
   };
   
   const data = findCategoryData();
-  
+
+  // Preload all images for current view
+  const imageUrls = useMemo(() => {
+    if (data.type === "root") {
+      return (data.items as Category[]).map(c => getCategoryImage(c.nome));
+    }
+    return (data.items as Subcategoria[]).map(s => getCategoryImage(s.nome));
+  }, [data.type, data.items]);
+
+  useEffect(() => {
+    preloadImages(imageUrls);
+  }, [imageUrls]);
   const getPageTitle = () => {
     if (data.type === "root") return "Categorias de Produtos";
     if (data.breadcrumb.length > 0) {
@@ -160,8 +172,8 @@ const Catalogo = () => {
                         <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
                           <CardContent className="p-4 flex items-center gap-4">
                             {subcategoryImage && (
-                              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
-                                <img 
+                              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-muted relative">
+                                <CachedImage 
                                   src={subcategoryImage} 
                                   alt={item.nome}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -196,8 +208,8 @@ const Catalogo = () => {
                       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card/50 h-full hover:border-[#25D366]/50">
                         <CardContent className="p-4 flex items-center gap-4">
                           {itemImage && (
-                            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
-                              <img 
+                            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 bg-muted relative">
+                              <CachedImage 
                                 src={itemImage} 
                                 alt={item.nome}
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

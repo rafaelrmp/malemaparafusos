@@ -6,10 +6,17 @@ import { Button } from "@/components/ui/button";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import { categorias } from "@/data/products";
 import { getCategoryImage } from "@/lib/categoryImages";
+import { preloadImages } from "@/components/CachedImage";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
 
 const Index = () => {
+  // Preload category images on mount
+  useEffect(() => {
+    preloadImages(categorias.map(c => getCategoryImage(c.nome)));
+  }, []);
+
   const beneficios = [
     {
       icon: CheckCircle2,
