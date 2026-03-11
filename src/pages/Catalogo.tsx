@@ -85,7 +85,18 @@ const Catalogo = () => {
   };
   
   const data = findCategoryData();
-  
+
+  // Preload all images for current view
+  const imageUrls = useMemo(() => {
+    if (data.type === "root") {
+      return (data.items as Category[]).map(c => getCategoryImage(c.nome));
+    }
+    return (data.items as Subcategoria[]).map(s => getCategoryImage(s.nome));
+  }, [data.type, data.items]);
+
+  useEffect(() => {
+    preloadImages(imageUrls);
+  }, [imageUrls]);
   const getPageTitle = () => {
     if (data.type === "root") return "Categorias de Produtos";
     if (data.breadcrumb.length > 0) {
