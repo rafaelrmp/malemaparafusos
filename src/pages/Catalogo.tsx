@@ -19,6 +19,12 @@ const getWhatsAppUrl = (productName: string, breadcrumb: { label: string; slug: 
 const Catalogo = () => {
   const [searchParams] = useSearchParams();
   const categoriaParam = searchParams.get("categoria");
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Scroll para o topo do conteúdo quando a categoria muda
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [categoriaParam]);
   
   // Parse the category path (e.g., "parafusos/agricolas/parafuso-aro-roda")
   const categoryPath = categoriaParam ? categoriaParam.split("/") : [];

@@ -221,6 +221,12 @@ export const getCategoryImage = (nome: string): string | undefined => {
   if (!mappedPath) return undefined;
 
   const fileName = mappedPath.replace("/catalogo-pronto/", "");
+
+  // Verificar se há imagem local (para arquivos corrompidos no GitHub)
+  if (localImageOverrides[fileName]) {
+    return localImageOverrides[fileName];
+  }
+
   const folder = fileToFolder[fileName];
 
   if (folder) {
