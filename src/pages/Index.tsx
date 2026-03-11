@@ -12,6 +12,11 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
 
 const Index = () => {
+  // Preload category images on mount
+  useEffect(() => {
+    preloadImages(categorias.map(c => getCategoryImage(c.nome)));
+  }, []);
+
   const beneficios = [
     {
       icon: CheckCircle2,
