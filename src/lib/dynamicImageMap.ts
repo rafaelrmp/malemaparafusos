@@ -242,7 +242,6 @@ export const dynamicImageMap: Record<string, string> = {
   "Parafusos Inoxidáveis": "/catalogo-pronto/Parafusos Inoxidáveis.jpg",
   "Parafusos Moto": "/catalogo-pronto/Parafusos Moto.jpg",
   "Parafusos": "/catalogo-pronto/Parafusos.jpg",
-  "PARAFUSOS": "/catalogo-pronto/icon-parafusos.png",
   "Pasta Abrasiva": "/catalogo-pronto/Pasta Abrasiva.jpg",
   "Pegador Magnético": "/catalogo-pronto/Pegador Magnético.jpg",
   "Pincel": "/catalogo-pronto/Pincel.jpg",
