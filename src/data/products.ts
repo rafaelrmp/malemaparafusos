@@ -29,7 +29,6 @@ export const categorias: Category[] = [
     nome: "PARAFUSOS",
     slug: "parafusos",
     icon: "bolt",
-    imagem: "/images/icons/parafuso-icon.png",
     descricao: "Linha completa de parafusos para todas as aplicações industriais, comerciais e agrícolas",
     subcategorias: [
       
