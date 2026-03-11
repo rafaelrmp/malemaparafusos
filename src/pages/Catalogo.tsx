@@ -1,4 +1,5 @@
 import { useSearchParams, Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CategoryCard } from "@/components/CategoryCard";
@@ -9,7 +10,6 @@ import { ChevronRight, MessageCircle } from "lucide-react";
 import { getCategoryImage } from "@/lib/categoryImages";
 
 const WHATSAPP_NUMBER = "5511940291064";
-
 const getWhatsAppUrl = (productName: string, breadcrumb: { label: string; slug: string }[]) => {
   const categoryPath = [...breadcrumb.map(b => b.label), productName].join(" -> ");
   const message = `Olá, acessei a categoria pelo menu do Site Malema Parafusos e gostaria de saber valores do produto (${categoryPath})`;
