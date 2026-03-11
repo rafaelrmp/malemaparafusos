@@ -160,7 +160,7 @@ const Catalogo = () => {
                         <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
                           <CardContent className="p-4 flex items-center gap-4">
                             {subcategoryImage && (
-                              <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
                                 <img 
                                   src={subcategoryImage} 
                                   alt={item.nome}
@@ -196,7 +196,7 @@ const Catalogo = () => {
                       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card/50 h-full hover:border-[#25D366]/50">
                         <CardContent className="p-4 flex items-center gap-4">
                           {itemImage && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
                               <img 
                                 src={itemImage} 
                                 alt={item.nome}
