@@ -435,7 +435,7 @@ export const categorias: Category[] = [
     id: 8,
     nome: "ELEMENTOS DE FIXAÇÃO",
     slug: "elementos-fixacao",
-    icon: "anchor",
+    icon: "pin",
     descricao: "Rebites, anéis de retenção, chavetas e elementos diversos de fixação",
     subcategorias: [
       { nome: "Anel de Retenção", slug: "anel-retencao" },

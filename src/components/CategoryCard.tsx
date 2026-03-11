@@ -31,6 +31,14 @@ const iconMap: Record<string, LucideIcon> = {
   "hard-hat": HardHat,
 };
 
+interface CategoryCardProps {
+  nome: string;
+  descricao: string;
+  icon: string;
+  slug: string;
+  imagem?: string;
+}
+
 export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCardProps) => {
   const Icon = iconMap[icon] || Wrench;
 
