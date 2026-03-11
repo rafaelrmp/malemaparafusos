@@ -387,7 +387,7 @@ export const categorias: Category[] = [
     id: 6,
     nome: "CORTE / DESBASTE / LIXA",
     slug: "corte-desbaste-lixa",
-    icon: "scissors",
+    icon: "disc",
     descricao: "Discos de corte, desbaste, lixas e ferramentas abrasivas profissionais",
     subcategorias: [
       { nome: "Acessórios Corte / Lixa", slug: "acessorios-corte-lixa" },
