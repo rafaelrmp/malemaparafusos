@@ -44,13 +44,12 @@ export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCa
     <Link to={`/catalogo?categoria=${slug}`}>
       <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
         <CardHeader className="text-center pb-2">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
+          <div className="mx-auto mb-4 flex h-28 w-28 sm:h-24 sm:w-24 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
             {imagem ? (
               <img 
                 src={imagem} 
                 alt={nome} 
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             ) : (
               <Icon className="h-10 w-10 text-primary" />
