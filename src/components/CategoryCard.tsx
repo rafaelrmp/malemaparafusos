@@ -4,13 +4,13 @@ import {
   Wrench, Hexagon, Circle, Square, Box, Dot, 
   Hammer, Flame, Crosshair, Disc, Plug, Home, Car, 
   Droplet, AlertTriangle, Layers, ArrowUp, HardHat,
-  Cog, Pin
+  Bolt, Pin
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
   wrench: Wrench,
-  cog: Cog,
+  bolt: Bolt,
   hexagon: Hexagon,
   circle: Circle,
   cylinder: Square,
