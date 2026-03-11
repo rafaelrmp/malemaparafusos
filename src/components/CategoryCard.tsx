@@ -10,7 +10,7 @@ import { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
   wrench: Wrench,
-  cog: Cog,
+  bolt: Bolt,
   hexagon: Hexagon,
   circle: Circle,
   cylinder: Square,

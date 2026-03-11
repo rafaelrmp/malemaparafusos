@@ -28,7 +28,7 @@ export const categorias: Category[] = [
     id: 1,
     nome: "PARAFUSOS",
     slug: "parafusos",
-    icon: "cog",
+    icon: "bolt",
     descricao: "Linha completa de parafusos para todas as aplicações industriais, comerciais e agrícolas",
     subcategorias: [
       
