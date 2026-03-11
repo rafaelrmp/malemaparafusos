@@ -28,7 +28,7 @@ export const categorias: Category[] = [
     id: 1,
     nome: "PARAFUSOS",
     slug: "parafusos",
-    icon: "wrench",
+    icon: "cog",
     descricao: "Linha completa de parafusos para todas as aplicações industriais, comerciais e agrícolas",
     subcategorias: [
       
@@ -355,7 +355,7 @@ export const categorias: Category[] = [
     id: 5,
     nome: "PERFURAÇÃO",
     slug: "perfuracao",
-    icon: "target",
+    icon: "crosshair",
     descricao: "Brocas, serras copo, fresas e acessórios para perfuração em diversos materiais",
     subcategorias: [
       {
@@ -387,7 +387,7 @@ export const categorias: Category[] = [
     id: 6,
     nome: "CORTE / DESBASTE / LIXA",
     slug: "corte-desbaste-lixa",
-    icon: "scissors",
+    icon: "disc",
     descricao: "Discos de corte, desbaste, lixas e ferramentas abrasivas profissionais",
     subcategorias: [
       { nome: "Acessórios Corte / Lixa", slug: "acessorios-corte-lixa" },
@@ -435,7 +435,7 @@ export const categorias: Category[] = [
     id: 8,
     nome: "ELEMENTOS DE FIXAÇÃO",
     slug: "elementos-fixacao",
-    icon: "anchor",
+    icon: "pin",
     descricao: "Rebites, anéis de retenção, chavetas e elementos diversos de fixação",
     subcategorias: [
       { nome: "Anel de Retenção", slug: "anel-retencao" },
