@@ -1,32 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { 
-  Wrench, Hexagon, Circle, Square, Anchor, Box, Dot, 
-  Hammer, Flame, Target, Scissors, Plug, Home, Car, 
-  Droplet, AlertTriangle, Layers, ArrowUp, HardHat
+  Wrench, Hexagon, Circle, Square, Box, Dot, 
+  Hammer, Flame, Crosshair, Disc, Plug, Home, Car, 
+  Droplet, AlertTriangle, Layers, ArrowUp, HardHat,
+  Cog, Pin
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
-interface CategoryCardProps {
-  nome: string;
-  descricao: string;
-  icon: string;
-  slug: string;
-  imagem?: string;
-}
-
 const iconMap: Record<string, LucideIcon> = {
   wrench: Wrench,
+  cog: Cog,
   hexagon: Hexagon,
   circle: Circle,
   cylinder: Square,
-  anchor: Anchor,
+  pin: Pin,
   box: Box,
   dot: Dot,
   hammer: Hammer,
   flame: Flame,
-  target: Target,
-  scissors: Scissors,
+  crosshair: Crosshair,
+  disc: Disc,
   plug: Plug,
   home: Home,
   car: Car,
