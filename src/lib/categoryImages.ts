@@ -12,6 +12,7 @@ const localImageOverrides: Record<string, string> = {
   "Anilha / Sapatilha.jpg": "/images/produtos/Anilha_Sapatilha.png",
   "Talhadeiras/Ponteiras.jpg": "/images/produtos/Talhadeiras_Ponteiras.png",
   "Parabolt / Chumbador.jpg": "/images/produtos/Parabolt_Chumbador.png",
+  "icon-parafusos.png": "/images/produtos/icon-parafusos.png",
 };
 // Mapeamento de nome do arquivo → pasta no GitHub (verificado manualmente no repo)
 const fileToFolder: Record<string, string> = {
