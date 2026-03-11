@@ -7,6 +7,11 @@ import {
   Bolt, Pin
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import parafusoIcon from "@/assets/icons/parafuso-icon.png";
+
+const customIconImages: Record<string, string> = {
+  bolt: parafusoIcon,
+};
 
 const iconMap: Record<string, LucideIcon> = {
   wrench: Wrench,
@@ -52,6 +57,12 @@ export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCa
                 src={imagem} 
                 alt={nome} 
                 className="w-full h-full object-cover"
+              />
+            ) : customIconImages[icon] ? (
+              <img 
+                src={customIconImages[icon]} 
+                alt={nome} 
+                className="h-16 w-16 sm:h-14 sm:w-14 object-contain"
               />
             ) : (
               <Icon className="h-10 w-10 text-primary" />
