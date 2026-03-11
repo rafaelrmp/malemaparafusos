@@ -3,6 +3,15 @@ import { dynamicImageMap } from "./dynamicImageMap";
 const GITHUB_BASE_URL =
   "https://raw.githubusercontent.com/Peclat/malemaparafusos/2334751d2c0f1049b68fa5c53583840751a56bdc/Cat%C3%A1logo%20Malema%20Completo/";
 
+// Imagens locais para produtos cujos arquivos no GitHub estão corrompidos
+const localImageOverrides: Record<string, string> = {
+  "Eletrodo / MMA.jpg": "/images/produtos/Eletrodo_MMA.png",
+  "Plasma / Carvão.jpg": "/images/produtos/Plasma_Carvao.png",
+  "Repuxo / Pop.jpg": "/images/produtos/Repuxo_Pop.png",
+  "Rosca Postiça / Suplemento.jpg": "/images/produtos/Rosca_Postica_Suplemento.png",
+  "Anilha / Sapatilha.jpg": "/images/produtos/Anilha_Sapatilha.png",
+  "Talhadeiras/Ponteiras.jpg": "/images/produtos/Talhadeiras_Ponteiras.png",
+};
 // Mapeamento de nome do arquivo → pasta no GitHub (verificado manualmente no repo)
 const fileToFolder: Record<string, string> = {
   // PARAFUSOS
@@ -212,6 +221,12 @@ export const getCategoryImage = (nome: string): string | undefined => {
   if (!mappedPath) return undefined;
 
   const fileName = mappedPath.replace("/catalogo-pronto/", "");
+
+  // Verificar se há imagem local (para arquivos corrompidos no GitHub)
+  if (localImageOverrides[fileName]) {
+    return localImageOverrides[fileName];
+  }
+
   const folder = fileToFolder[fileName];
 
   if (folder) {
