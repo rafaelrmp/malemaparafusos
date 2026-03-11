@@ -172,8 +172,8 @@ const Catalogo = () => {
                         <Card className="group cursor-pointer transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 border-border bg-card h-full">
                           <CardContent className="p-4 flex items-center gap-4">
                             {subcategoryImage && (
-                              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-muted">
-                                <img 
+                              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-muted relative">
+                                <CachedImage 
                                   src={subcategoryImage} 
                                   alt={item.nome}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
