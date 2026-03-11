@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { CachedImage } from "@/components/CachedImage";
 import { 
   Wrench, Hexagon, Circle, Square, Box, Dot, 
   Hammer, Flame, Crosshair, Disc, Plug, Home, Car, 
