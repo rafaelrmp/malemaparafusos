@@ -54,7 +54,7 @@ export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCa
         <CardHeader className="text-center pb-2">
           <div className="mx-auto mb-4 flex h-28 w-28 sm:h-24 sm:w-24 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
             {imagem ? (
-              <img 
+              <CachedImage 
                 src={imagem} 
                 alt={nome} 
                 className="w-full h-full object-cover"

@@ -1,5 +1,6 @@
 import { useSearchParams, Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
+import { preloadImages, CachedImage } from "@/components/CachedImage";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CategoryCard } from "@/components/CategoryCard";
