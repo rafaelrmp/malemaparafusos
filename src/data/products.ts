@@ -355,7 +355,7 @@ export const categorias: Category[] = [
     id: 5,
     nome: "PERFURAÇÃO",
     slug: "perfuracao",
-    icon: "target",
+    icon: "crosshair",
     descricao: "Brocas, serras copo, fresas e acessórios para perfuração em diversos materiais",
     subcategorias: [
       {
