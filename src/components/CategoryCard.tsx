@@ -62,7 +62,7 @@ export const CategoryCard = ({ nome, descricao, icon, slug, imagem }: CategoryCa
               <img 
                 src={customIconImages[icon]} 
                 alt={nome} 
-                className="h-20 w-20 sm:h-18 sm:w-18 object-contain"
+                className="h-16 w-20 sm:h-14 sm:w-18 object-contain"
               />
             ) : (
               <Icon className="h-10 w-10 text-primary" />
