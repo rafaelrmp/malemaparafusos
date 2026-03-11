@@ -7,6 +7,11 @@ import {
   Bolt, Pin
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import parafusoIcon from "@/assets/icons/parafuso-icon.png";
+
+const customIconImages: Record<string, string> = {
+  bolt: parafusoIcon,
+};
 
 const iconMap: Record<string, LucideIcon> = {
   wrench: Wrench,
