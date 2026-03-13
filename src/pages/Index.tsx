@@ -10,6 +10,7 @@ import { preloadImages } from "@/components/CachedImage";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Truck, Clock, Award } from "lucide-react";
+import { LocationSection } from "@/components/LocationSection";
 
 const Index = () => {
   // Preload category images on mount
