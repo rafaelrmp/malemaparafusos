@@ -12,7 +12,7 @@ export const Header = () => {
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
     { to: "/contato", label: "Contato" },
-    { to: "/#localizacao", label: "Localização", icon: MapPin },
+    { to: "/#localizacao", label: "Localização", icon: MapPin, isHash: true },
   ];
 
   return (
@@ -60,17 +60,27 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.to}
-                  to={item.to}
-                  end
-                  className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
-                  activeClassName="text-white font-semibold bg-red-600"
-                >
-                  {item.label}
-                </NavLink>
-              ))}
+              {navItems.map((item) =>
+                item.isHash ? (
+                  <a
+                    key={item.to}
+                    href={item.to}
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
+                    activeClassName="text-white font-semibold bg-red-600"
+                  >
+                    {item.label}
+                  </NavLink>
+                )
+              )}
 
               <QuoteRequestDialog>
                 <Button 
@@ -92,17 +102,27 @@ export const Header = () => {
               </SheetTrigger>
               <SheetContent side="right">
                 <nav className="flex flex-col space-y-4 mt-8">
-                  {navItems.map((item) => (
-                    <NavLink
-                      key={item.to}
-                      to={item.to}
-                      end
-                      className="text-lg font-medium text-foreground/80 transition-colors py-2 px-3 rounded-md hover:bg-red-600 hover:text-white"
-                      activeClassName="text-white font-semibold bg-red-600"
-                    >
-                      {item.label}
-                    </NavLink>
-                  ))}
+                  {navItems.map((item) =>
+                    item.isHash ? (
+                      <a
+                        key={item.to}
+                        href={item.to}
+                        className="text-lg font-medium text-foreground/80 transition-colors py-2 px-3 rounded-md hover:bg-red-600 hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <NavLink
+                        key={item.to}
+                        to={item.to}
+                        end
+                        className="text-lg font-medium text-foreground/80 transition-colors py-2 px-3 rounded-md hover:bg-red-600 hover:text-white"
+                        activeClassName="text-white font-semibold bg-red-600"
+                      >
+                        {item.label}
+                      </NavLink>
+                    )
+                  )}
                   <QuoteRequestDialog>
                     <Button 
                       className="mt-4 bg-red-600 text-white font-semibold hover:bg-red-700 shadow-lg hover:shadow-xl transition-all duration-300 gap-2 w-full"
