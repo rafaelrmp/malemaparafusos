@@ -95,7 +95,7 @@ const fileToFolder: Record<string, string> = {
   "Borracha.jpg": "ABRAADEIRAS", "Canaleta.jpg": "ABRAADEIRAS", "Intercooler.jpg": "ABRAADEIRAS",
   "Mangote.jpg": "ABRAADEIRAS", "Nylon.jpg": "ABRAADEIRAS", "Radial.jpg": "ABRAADEIRAS",
   "Tipo Fita.jpg": "ABRAADEIRAS", "Tipo Janela.jpg": "ABRAADEIRAS", "Tipo Norma.jpg": "ABRAADEIRAS",
-  "Tipo U.jpg": "ABRAADEIRAS", "Tucho.jpg": "ABRAADEIRAS",
+  "Tipo U.jpg": "ABRAADEIRAS", "Tucho.jpg": "ABRAADEIRAS", "Tipo Tucho.jpg": "ABRAADEIRAS",
 
   // SOLDA
   "Acessórios.jpg": "SOLDA", "Esquadro Magnético.jpg": "SOLDA", "Fluxo de Solda.jpg": "SOLDA",
