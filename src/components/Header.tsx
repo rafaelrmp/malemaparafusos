@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, ChevronDown, FileText } from "lucide-react";
+import { Phone, Mail, ChevronDown, FileText, MapPin } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { QuoteRequestDialog } from "@/components/QuoteRequestDialog";
 import mascoteLogo from "@/assets/mascote-malema.png";
@@ -12,6 +12,7 @@ export const Header = () => {
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
     { to: "/contato", label: "Contato" },
+    { to: "/#localizacao", label: "Localização", icon: MapPin },
   ];
 
   return (
