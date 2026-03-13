@@ -1,29 +1,38 @@
 
 
-## Adicionar imagens aos itens de Parafuso Allen
+## Adicionar botao "Localização" no header + seção de mapa na pagina inicial
 
-### Mapeamento imagem -> item
+### Resumo
 
-| Item | Slug completo | Imagem |
-|------|---------------|--------|
-| Parafuso Allen Cabeca Chata | `parafusos/parafusos-tipos/parafuso-allen/allen-cabeca-chata` | image-16.png |
-| Parafuso Allen Cilindrica MM | `parafusos/parafusos-tipos/parafuso-allen/allen-cilindrica-mm` | image-17.png |
-| Parafuso Allen Cilindrica Polegada | `parafusos/parafusos-tipos/parafuso-allen/allen-cilindrica-polegada` | image-18.png |
-| Parafuso Allen Sem Cabeca | `parafusos/parafusos-tipos/parafuso-allen/allen-sem-cabeca` | image-19.png |
+Baseado nas imagens enviadas, o usuario quer:
+1. Um botao "Localização" no header (nav desktop e mobile), entre "Contato" e "Solicitar Orçamento"
+2. Um link "Localização" no footer em "Links Rápidos"
+3. Uma seção de localização na pagina inicial com mapa do Google Maps e informações de contato
 
 ### Etapas
 
-1. Copiar as 4 imagens para `src/assets/catalogo/parafusos/` com nomes correspondentes aos slugs
-2. Adicionar imports e mapeamentos em `src/lib/categoryImages.ts`
+**1. Adicionar botao "Localização" no Header (`src/components/Header.tsx`)**
+- Adicionar `MapPin` ao import do lucide-react
+- Inserir um botao/link "Localização" na nav desktop (entre Contato e Solicitar Orçamento) que faz scroll ate a seção de localização ou abre Google Maps
+- Mesmo botao no menu mobile
+- Estilo: mesmo padrão dos outros nav items, mas com icone MapPin
 
-### Detalhes tecnicos
+**2. Adicionar link no Footer (`src/components/Footer.tsx`)**
+- Adicionar "Localização" na lista de "Links Rápidos" apontando para a seção na home ou para a pagina de contato
 
-**Arquivos criados:**
-- `src/assets/catalogo/parafusos/allen-cabeca-chata.jpg`
-- `src/assets/catalogo/parafusos/allen-cilindrica-mm.jpg`
-- `src/assets/catalogo/parafusos/allen-cilindrica-polegada.jpg`
-- `src/assets/catalogo/parafusos/allen-sem-cabeca.jpg`
+**3. Criar componente LocationSection (`src/components/LocationSection.tsx`)**
+- Layout em duas colunas (responsivo: empilha em mobile)
+- Coluna esquerda: card com endereco completo, horário de funcionamento (Seg-Sex 08:00-18:00, Sab 08:00-13:00), botao WhatsApp "Falar com Atendente"
+- Coluna direita: iframe do Google Maps com coordenadas -23.43852, -47.06042, zoom 16
+- Mapa com bordas arredondadas e sombra
 
-**Arquivo editado:**
-- `src/lib/categoryImages.ts` - adicionar 4 imports e 4 entradas no mapeamento com o caminho completo `parafusos/parafusos-tipos/parafuso-allen/[slug]`
+**4. Adicionar seção na pagina inicial (`src/pages/Index.tsx`)**
+- Inserir `<LocationSection />` antes do CTA final (seção "Pronto para Começar?")
+- Seção com id="localizacao" para ancoragem
+
+### Arquivos editados
+- `src/components/Header.tsx` - botao Localização na nav
+- `src/components/Footer.tsx` - link Localização nos Links Rápidos
+- `src/components/LocationSection.tsx` - novo componente
+- `src/pages/Index.tsx` - incluir LocationSection
 
