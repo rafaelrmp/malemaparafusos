@@ -322,7 +322,7 @@ export const categorias: Category[] = [
       { nome: "Tipo Janela", slug: "abracadeira-janela" },
       { nome: "Tipo Norma", slug: "abracadeira-norma" },
       { nome: "Tipo U", slug: "abracadeira-u" },
-      { nome: "Tucho", slug: "abracadeira-tucho" }
+      { nome: "Mangote", slug: "abracadeira-mangote" }
     ]
   },
   {
