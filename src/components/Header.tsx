@@ -12,7 +12,7 @@ export const Header = () => {
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
     { to: "/contato", label: "Contato" },
-    { to: "/#localizacao", label: "Localização", icon: MapPin },
+    { to: "/#localizacao", label: "Localização", icon: MapPin, isHash: true },
   ];
 
   return (
