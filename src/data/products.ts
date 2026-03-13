@@ -312,7 +312,6 @@ export const categorias: Category[] = [
     descricao: "Abraçadeiras de nylon, metálicas e especiais para fixação de tubos e mangueiras",
     subcategorias: [
       { nome: "Abraçadeira para Canos", slug: "abracadeira-canos" },
-      { nome: "Bico Injetor", slug: "bico-injetor" },
       { nome: "Borracha", slug: "abracadeira-borracha" },
       { nome: "Canaleta", slug: "abracadeira-canaleta" },
       { nome: "Intercooler", slug: "abracadeira-intercooler" },
