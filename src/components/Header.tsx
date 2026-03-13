@@ -60,17 +60,27 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.to}
-                  to={item.to}
-                  end
-                  className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
-                  activeClassName="text-white font-semibold bg-red-600"
-                >
-                  {item.label}
-                </NavLink>
-              ))}
+              {navItems.map((item) =>
+                item.isHash ? (
+                  <a
+                    key={item.to}
+                    href={item.to}
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors rounded-md hover:bg-red-600 hover:text-white"
+                    activeClassName="text-white font-semibold bg-red-600"
+                  >
+                    {item.label}
+                  </NavLink>
+                )
+              )}
 
               <QuoteRequestDialog>
                 <Button 
