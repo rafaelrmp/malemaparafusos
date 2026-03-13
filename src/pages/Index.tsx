@@ -107,6 +107,8 @@ const Index = () => {
           </div>
         </section>
 
+        <LocationSection />
+
         {/* CTA */}
         <section className="py-16 bg-gradient-hero text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
