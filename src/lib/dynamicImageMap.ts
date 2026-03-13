@@ -340,6 +340,7 @@ export const dynamicImageMap: Record<string, string> = {
   "Trenas": "/catalogo-pronto/Trenas.jpg",
   "Tubo Espaguete Isolante": "/catalogo-pronto/Tubo Espaguete Isolante.jpg",
   "Tucho": "/catalogo-pronto/Tucho.jpg",
+  "Tipo Tucho": "/catalogo-pronto/Tucho.jpg",
   "Tupias e Plainas": "/catalogo-pronto/Tupias e Plainas.jpg",
   "Vaselinas": "/catalogo-pronto/Vaselinas.jpg",
   "Vassouras": "/catalogo-pronto/Vassouras.jpg",
