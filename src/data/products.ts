@@ -315,14 +315,14 @@ export const categorias: Category[] = [
       { nome: "Borracha", slug: "abracadeira-borracha" },
       { nome: "Canaleta", slug: "abracadeira-canaleta" },
       { nome: "Intercooler", slug: "abracadeira-intercooler" },
-      { nome: "Mangote", slug: "abracadeira-mangote" },
+      { nome: "Tipo Tucho", slug: "abracadeira-tucho" },
       { nome: "Nylon", slug: "abracadeira-nylon" },
       { nome: "Radial", slug: "abracadeira-radial" },
       { nome: "Tipo Fita", slug: "abracadeira-fita" },
       { nome: "Tipo Janela", slug: "abracadeira-janela" },
       { nome: "Tipo Norma", slug: "abracadeira-norma" },
       { nome: "Tipo U", slug: "abracadeira-u" },
-      { nome: "Tucho", slug: "abracadeira-tucho" }
+      { nome: "Mangote", slug: "abracadeira-mangote" }
     ]
   },
   {
